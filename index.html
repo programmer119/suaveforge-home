@@ -13,20 +13,26 @@
   <body>
     <header class="topbar">
       <a class="brand" href="#intro" aria-label="SuaveForge home">
-        <svg class="forge-mark small" viewBox="0 0 240 240" role="img" aria-label="SuaveForge logo">
-          <use href="#forge-symbol"></use>
-        </svg>
         <span>SuaveForge</span>
       </a>
-      <nav class="top-nav" aria-label="Section navigation">
-        <a href="#about">About</a>
-        <a href="#team">Team</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#work">Work</a>
-      </nav>
+      <button class="menu-trigger" type="button" aria-label="Open menu">
+        <span>MENU</span>
+        <i></i>
+      </button>
       <a class="touch-link" href="#contact">Get in Touch</a>
     </header>
+
+    <aside class="side-nav" aria-label="Section navigation">
+      <a class="active" href="#intro">Intro</a>
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#stats">Stats</a>
+      <a href="#background">Awards</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#process">Process</a>
+      <a href="#work">Work</a>
+    </aside>
 
     <svg class="svg-defs" aria-hidden="true" focusable="false">
       <symbol id="forge-symbol" viewBox="0 0 240 240">
@@ -63,19 +69,27 @@
 
     <main>
       <section id="intro" class="intro panel">
-        <div class="intro-mark" aria-hidden="true">
-          <svg class="forge-mark hero-logo" viewBox="0 0 240 240">
-            <use href="#forge-symbol"></use>
-          </svg>
-        </div>
         <div class="intro-copy">
-          <p class="eyebrow">Smooth. Flexible. Fast.</p>
-          <h1>We are SuaveForge.</h1>
-          <h2>Full-Stack Development Team</h2>
+          <p class="eyebrow">We are SuaveForge.</p>
+          <h1><span>Full-Stack</span><br />Development Team</h1>
           <p>
             SuaveForge는 복잡한 요구사항을 부드럽게 정리하고, 유연하게 설계하며,
             빠르게 실행 가능한 소프트웨어로 완성하는 5인 개발팀입니다.
           </p>
+        </div>
+        <div class="intro-art" aria-hidden="true">
+          <div class="art-blob"></div>
+          <div class="art-line one"></div>
+          <div class="art-line two"></div>
+          <div class="art-device">
+            <svg class="forge-mark hero-logo" viewBox="0 0 240 240">
+              <use href="#forge-symbol"></use>
+            </svg>
+          </div>
+          <div class="art-badge heart">♥</div>
+          <div class="art-badge star">★</div>
+          <div class="art-badge at">@</div>
+          <div class="art-platform"></div>
         </div>
       </section>
 
