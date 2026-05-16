@@ -253,8 +253,63 @@
       </section>
     </main>
 
-    <div class="build-version" aria-label="site build version">0517023058-003</div>
+    <div class="build-version" aria-label="site build version">0517024729-004</div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="assets/logo-motion/suaveforge-logo-motion.js"></script>
+    <script>
+      (() => {
+        const navLinks = [...document.querySelectorAll(".side-nav a")];
+        const sections = navLinks
+          .map((link) => document.querySelector(link.getAttribute("href")))
+          .filter(Boolean);
+
+        const setActive = (id) => {
+          navLinks.forEach((link) => {
+            link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+          });
+        };
+
+        const updateActiveFromScroll = () => {
+          const anchorLine = window.innerHeight * 0.42;
+          let current = sections[0];
+
+          sections.forEach((section) => {
+            if (section.getBoundingClientRect().top <= anchorLine) {
+              current = section;
+            }
+          });
+
+          if (current) setActive(current.id);
+        };
+
+        let ticking = false;
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+              updateActiveFromScroll();
+              ticking = false;
+            });
+          },
+          { passive: true }
+        );
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            const id = link.getAttribute("href").slice(1);
+            setActive(id);
+          });
+        });
+
+        window.addEventListener("hashchange", () => {
+          const id = window.location.hash.slice(1);
+          if (id) setActive(id);
+        });
+
+        updateActiveFromScroll();
+      })();
+    </script>
   </body>
 </html>

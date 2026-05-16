@@ -8,6 +8,11 @@ async function initSuaveForgeLogo(root) {
       shell.innerHTML = await response.text();
     }
 
+    if (!window.gsap) {
+      root.classList.add("is-static-logo");
+      return;
+    }
+
     const status = root.querySelector("#status") || { textContent: "" };
     const replay = root.querySelector("#replay");
     const finalOnly = root.querySelector("#finalOnly");

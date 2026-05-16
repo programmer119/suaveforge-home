@@ -129,6 +129,24 @@
       fill: var(--spark);
     }
 
+    .suaveforge-logo-motion.is-static-logo .ghost-mark,
+    .suaveforge-logo-motion.is-static-logo .broken-s,
+    .suaveforge-logo-motion.is-static-logo .s-cut,
+    .suaveforge-logo-motion.is-static-logo .impact-ring,
+    .suaveforge-logo-motion.is-static-logo .spark,
+    .suaveforge-logo-motion.is-static-logo .f-tool,
+    .suaveforge-logo-motion.is-static-logo .exact-final {
+      opacity: 0;
+    }
+
+    .suaveforge-logo-motion.is-static-logo .draw-ring,
+    .suaveforge-logo-motion.is-static-logo .inner-arc,
+    .suaveforge-logo-motion.is-static-logo .arrow-head,
+    .suaveforge-logo-motion.is-static-logo .final-f {
+      opacity: 1;
+      stroke-dashoffset: 0;
+    }
+
     .suaveforge-logo-motion .wordmark {
       margin: 0;
       font-size: 18px;
