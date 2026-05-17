@@ -606,42 +606,118 @@ body.menu-open {
   will-change: opacity, transform;
 }
 
+.orbit-badges {
+  position: absolute;
+  left: 20%;
+  top: 28%;
+  z-index: 3;
+  width: min(38vw, 420px);
+  aspect-ratio: 0.72;
+  pointer-events: none;
+}
+
 .art-badge {
   position: absolute;
   z-index: 3;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   place-items: center;
   border-radius: 50%;
   color: #fff;
   font-weight: 950;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+  transform: translate(-50%, -50%);
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.82, 0, 0.18, 1);
+  will-change: left, top, transform;
 }
 
-.art-badge.heart {
-  right: 28%;
-  top: 31%;
-  width: 78px;
-  height: 78px;
+.art-badge span {
+  display: block;
+  line-height: 0.95;
+}
+
+.art-badge small {
+  display: block;
+  margin-top: 3px;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.art-badge.web {
+  left: 92%;
+  top: 5%;
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(135deg, #8d5dff, #ff5970);
+  font-size: 28px;
+  animation-name: orbitWeb;
+}
+
+.art-badge.app {
+  left: 101%;
+  top: 33%;
+  width: 68px;
+  height: 68px;
   background: linear-gradient(135deg, #d62e72, #ff653f);
-  font-size: 42px;
+  font-size: 34px;
+  animation-name: orbitApp;
 }
 
-.art-badge.star {
-  right: 14%;
-  top: 43%;
+.art-badge.pc {
+  left: 91%;
+  top: 58%;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #27c3a4, #715fe9);
+  font-size: 31px;
+  animation-name: orbitPc;
+}
+
+.art-badge.embedded {
+  left: -2%;
+  top: 44%;
   width: 62px;
   height: 62px;
-  background: linear-gradient(135deg, #27c3a4, #715fe9);
-  font-size: 35px;
+  background: linear-gradient(135deg, #ffbd35, #0d8991);
+  font-size: 32px;
+  animation-name: orbitEmbedded;
 }
 
-.art-badge.at {
-  right: 6%;
-  top: 25%;
-  width: 42px;
-  height: 42px;
-  background: linear-gradient(135deg, #8d5dff, #ff5970);
-  font-size: 24px;
+@keyframes orbitWeb {
+  0%, 18% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  25%, 43% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(10deg) scale(1.08); }
+  50%, 68% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(-8deg) scale(1); }
+  75%, 93% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(12deg) scale(0.96); }
+  100% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+}
+
+@keyframes orbitApp {
+  0%, 18% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  25%, 43% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(-10deg) scale(0.98); }
+  50%, 68% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(12deg) scale(0.94); }
+  75%, 93% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(-8deg) scale(1.02); }
+  100% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+}
+
+@keyframes orbitPc {
+  0%, 18% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  25%, 43% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(10deg) scale(0.95); }
+  50%, 68% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(-12deg) scale(1); }
+  75%, 93% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(8deg) scale(1.05); }
+  100% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+}
+
+@keyframes orbitEmbedded {
+  0%, 18% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  25%, 43% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(12deg) scale(1); }
+  50%, 68% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(-10deg) scale(1.05); }
+  75%, 93% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(8deg) scale(0.98); }
+  100% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
 }
 
 .art-platform {
