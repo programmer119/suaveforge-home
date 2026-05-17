@@ -8,20 +8,60 @@
       name="description"
       content="SuaveForge는 게임, 시뮬레이션, 트레이딩 시스템, 웹 서비스를 빠르고 유연하게 제작하는 5인 개발팀입니다."
     />
-    <link rel="stylesheet" href="styles.css?v=0517103930-006" />
-    <link rel="stylesheet" href="assets/logo-motion/suaveforge-logo-motion.css?v=0517103930-006" />
+    <link rel="stylesheet" href="styles.css?v=0517135425-008" />
+    <link rel="stylesheet" href="assets/logo-motion/suaveforge-logo-motion.css?v=0517135425-008" />
   </head>
   <body>
+    <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-hidden="true" />
     <header class="topbar">
       <a class="brand" href="#intro" aria-label="SuaveForge home">
         <span>SuaveForge</span>
       </a>
-      <button class="menu-trigger" type="button" aria-label="Open menu">
+      <label class="menu-trigger" for="menu-toggle" aria-label="Open menu" aria-controls="site-menu">
         <span>MENU</span>
         <i></i>
-      </button>
+      </label>
       <a class="touch-link" href="#contact">Get in Touch</a>
     </header>
+
+    <div class="menu-panel" id="site-menu" aria-hidden="true">
+      <nav class="menu-panel-nav" aria-label="Main menu">
+        <a href="#intro">Top</a>
+        <a href="#about">About SuaveForge</a>
+        <a href="#team">Team</a>
+        <a href="#stats">Accomplishments</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#process">Process</a>
+        <a href="#work">Featured Work</a>
+      </nav>
+      <div class="menu-contact">
+        <div>
+          <p>Get In Touch</p>
+          <h2>프로젝트를 빠르게 정리해드립니다.</h2>
+          <span>필요한 범위, 일정, 현재 상황을 남겨주시면 제작 방향을 함께 잡겠습니다.</span>
+        </div>
+        <form class="menu-form">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" />
+          </label>
+          <label>
+            <span>Company</span>
+            <input type="text" name="company" autocomplete="organization" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" />
+          </label>
+          <label>
+            <span>Comments</span>
+            <textarea name="comments" rows="4"></textarea>
+          </label>
+          <a class="menu-submit" href="mailto:contact@suaveforge.com?subject=SuaveForge 프로젝트 문의">Submit</a>
+        </form>
+      </div>
+    </div>
 
     <aside class="side-nav" aria-label="Section navigation">
       <a class="active" href="#intro">Intro</a>
@@ -253,15 +293,41 @@
       </section>
     </main>
 
-    <div class="build-version" aria-label="site build version">0517103930-006</div>
+    <div class="build-version" aria-label="site build version">0517135425-008</div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="assets/logo-motion/suaveforge-logo-motion.js"></script>
     <script>
       (() => {
+        const menuToggle = document.querySelector("#menu-toggle");
+        const menuButton = document.querySelector(".menu-trigger");
+        const menuPanel = document.querySelector("#site-menu");
         const navLinks = [...document.querySelectorAll(".side-nav a")];
+        const menuLinks = [...document.querySelectorAll(".menu-panel-nav a")];
         const sections = navLinks
           .map((link) => document.querySelector(link.getAttribute("href")))
           .filter(Boolean);
+
+        const setMenuOpen = (isOpen) => {
+          if (menuToggle) menuToggle.checked = isOpen;
+          document.body.classList.toggle("menu-open", isOpen);
+          menuButton?.classList.toggle("is-open", isOpen);
+          menuPanel?.classList.toggle("is-open", isOpen);
+          menuPanel?.setAttribute("aria-hidden", String(!isOpen));
+        };
+
+        menuToggle?.addEventListener("change", () => {
+          setMenuOpen(menuToggle.checked);
+        });
+
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            setMenuOpen(false);
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") setMenuOpen(false);
+        });
 
         const setActive = (id) => {
           navLinks.forEach((link) => {
