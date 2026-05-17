@@ -33,8 +33,8 @@ async function initSuaveForgeLogo(root) {
     gsap.set(q("#motionLayers"), { opacity: 1 });
     gsap.set(q("#ringPath, #innerArc"), { opacity: 1, strokeDashoffset: 0 });
     gsap.set(q("#arrowHead, #finalF"), { opacity: 1, x: 0, y: 0, rotation: 0, scale: 1 });
-    if (suaveText) gsap.set(suaveText, { opacity: 1, x: -17, y: 0 });
-    if (forgeText) gsap.set(forgeText, { opacity: 1, x: 17, y: 0 });
+    if (suaveText) gsap.set(suaveText, { opacity: 1, x: -4, y: 0 });
+    if (forgeText) gsap.set(forgeText, { opacity: 1, x: 4, y: 0 });
     status.textContent = "Final SVG lockup";
   }
 
@@ -53,9 +53,9 @@ async function initSuaveForgeLogo(root) {
 
     return gsap.timeline({ defaults: { ease: "power3.out" } })
       .to(suaveText, { opacity: 1, y: 0, duration: 0.48 }, 0.78)
-      .to(suaveText, { x: -17, duration: 0.42, ease: "power2.inOut" }, 1.78)
+      .to(suaveText, { x: -4, duration: 0.42, ease: "power2.inOut" }, 1.78)
       .to(forgeText, { opacity: 1, y: 0, duration: 0.34 }, 2.12)
-      .fromTo(forgeText, { x: -4 }, { x: 17, duration: 0.48, ease: "power2.out" }, 2.12);
+      .fromTo(forgeText, { x: -2 }, { x: 4, duration: 0.48, ease: "power2.out" }, 2.12);
   }
 
   function buildTimeline() {

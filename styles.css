@@ -629,36 +629,55 @@ body.menu-open {
   z-index: 2;
   display: flex;
   justify-content: center;
-  width: min(86%, 260px);
+  width: max-content;
   margin: 0;
   color: rgba(255, 255, 255, 0.92);
   font-size: clamp(24px, 2.5vw, 34px);
   font-weight: 950;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.01em;
   text-transform: lowercase;
+  white-space: nowrap;
   transform: translate(-50%, -50%);
   text-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
 }
 
 .art-device .suaveforge-logo-motion .wordmark-part {
   display: inline-block;
+  flex: 0 0 auto;
   opacity: 0;
   will-change: opacity, transform;
 }
 
 .orbit-badges {
   position: absolute;
-  left: 20%;
-  top: 28%;
-  z-index: 3;
-  width: min(38vw, 420px);
-  aspect-ratio: 0.72;
+  left: 16%;
+  top: 18%;
+  z-index: 4;
+  width: min(48vw, 500px);
+  aspect-ratio: 1.08;
   pointer-events: none;
+}
+
+.orbit-badges::before {
+  content: "";
+  position: absolute;
+  left: 7%;
+  top: 12%;
+  width: 86%;
+  height: 72%;
+  border: 3px solid rgba(255, 255, 255, 0.48);
+  border-left-color: rgba(70, 217, 242, 0.82);
+  border-bottom-color: rgba(70, 217, 242, 0.82);
+  border-radius: 50%;
+  transform: rotate(-14deg);
+  box-shadow: 0 0 20px rgba(70, 217, 242, 0.12);
 }
 
 .art-badge {
   position: absolute;
-  z-index: 3;
+  left: 12%;
+  top: 58%;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -668,11 +687,10 @@ body.menu-open {
   color: #fff;
   font-weight: 950;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
-  transform: translate(-50%, -50%);
-  animation-duration: 11s;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(0.82, 0, 0.18, 1);
-  will-change: left, top, transform;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.74);
+  will-change: left, top, opacity, visibility, transform;
 }
 
 .art-badge span {
@@ -689,75 +707,105 @@ body.menu-open {
 }
 
 .art-badge.web {
-  left: 92%;
-  top: 5%;
   width: 58px;
   height: 58px;
   background: linear-gradient(135deg, #8d5dff, #ff5970);
   font-size: 28px;
-  animation-name: orbitWeb;
 }
 
 .art-badge.app {
-  left: 101%;
-  top: 33%;
   width: 68px;
   height: 68px;
   background: linear-gradient(135deg, #d62e72, #ff653f);
   font-size: 34px;
-  animation-name: orbitApp;
 }
 
 .art-badge.pc {
-  left: 91%;
-  top: 58%;
   width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #27c3a4, #715fe9);
   font-size: 31px;
-  animation-name: orbitPc;
 }
 
 .art-badge.embedded {
-  left: -2%;
-  top: 44%;
   width: 62px;
   height: 62px;
   background: linear-gradient(135deg, #ffbd35, #0d8991);
   font-size: 32px;
-  animation-name: orbitEmbedded;
 }
 
-@keyframes orbitWeb {
-  0%, 18% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-  25%, 43% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(10deg) scale(1.08); }
-  50%, 68% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(-8deg) scale(1); }
-  75%, 93% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(12deg) scale(0.96); }
-  100% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+.orbit-badges[data-active="web"] .art-badge.web,
+.orbit-badges[data-active="app"] .art-badge.app,
+.orbit-badges[data-active="pc"] .art-badge.pc,
+.orbit-badges[data-active="embedded"] .art-badge.embedded {
+  visibility: visible;
+  animation: activeBadgeOrbit 3s linear both;
 }
 
-@keyframes orbitApp {
-  0%, 18% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-  25%, 43% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(-10deg) scale(0.98); }
-  50%, 68% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(12deg) scale(0.94); }
-  75%, 93% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(-8deg) scale(1.02); }
-  100% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-}
-
-@keyframes orbitPc {
-  0%, 18% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-  25%, 43% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(10deg) scale(0.95); }
-  50%, 68% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(-12deg) scale(1); }
-  75%, 93% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(8deg) scale(1.05); }
-  100% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-}
-
-@keyframes orbitEmbedded {
-  0%, 18% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-  25%, 43% { left: 92%; top: 5%; transform: translate(-50%, -50%) rotate(12deg) scale(1); }
-  50%, 68% { left: 101%; top: 33%; transform: translate(-50%, -50%) rotate(-10deg) scale(1.05); }
-  75%, 93% { left: 91%; top: 58%; transform: translate(-50%, -50%) rotate(8deg) scale(0.98); }
-  100% { left: -2%; top: 44%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+@keyframes activeBadgeOrbit {
+  0% {
+    left: 16%;
+    top: 48%;
+    z-index: 5;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(-7deg) scale(0.9);
+  }
+  8% {
+    left: 16%;
+    top: 48%;
+    z-index: 5;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(-7deg) scale(0.9);
+  }
+  16% {
+    left: 36%;
+    top: 31%;
+    z-index: 5;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(5deg) scale(1);
+  }
+  24% {
+    left: 62%;
+    top: 22%;
+    z-index: 5;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(10deg) scale(1.04);
+  }
+  35% {
+    left: 80%;
+    top: 31%;
+    z-index: 5;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(16deg) scale(0.94);
+  }
+  50% {
+    left: 89%;
+    top: 48%;
+    z-index: 1;
+    opacity: 0.22;
+    transform: translate(-50%, -50%) rotate(22deg) scale(0.72);
+  }
+  62% {
+    left: 62%;
+    top: 78%;
+    z-index: 1;
+    opacity: 0.18;
+    transform: translate(-50%, -50%) rotate(36deg) scale(0.68);
+  }
+  82% {
+    left: 22%;
+    top: 72%;
+    z-index: 1;
+    opacity: 0.22;
+    transform: translate(-50%, -50%) rotate(-20deg) scale(0.68);
+  }
+  100% {
+    left: 16%;
+    top: 48%;
+    z-index: 5;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(-7deg) scale(0.9);
+  }
 }
 
 .art-platform {
