@@ -87,11 +87,51 @@ a {
   letter-spacing: -1px;
 }
 
-.brand img {
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
   width: 30px;
   height: 30px;
   border-radius: 9px;
   box-shadow: 0 8px 18px rgba(24, 32, 40, 0.12);
+  overflow: hidden;
+}
+
+.brand-mark .logo-shell {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #263f5c, #1a2c42);
+  box-shadow: none;
+}
+
+.brand-mark .motion-logo {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform: scale(1.18);
+}
+
+.brand-mark .draw-ring {
+  fill: none;
+  stroke: #f7f8f4;
+  stroke-width: 58;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brand-mark .inner-arc {
+  fill: none;
+  stroke: #46d9f2;
+  stroke-width: 24;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brand-mark .arrow-head,
+.brand-mark .final-f {
+  fill: #f7f8f4;
 }
 
 .menu-trigger {

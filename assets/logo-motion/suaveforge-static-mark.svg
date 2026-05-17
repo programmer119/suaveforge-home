@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="SuaveForge mark">
-  <rect width="1024" height="1024" rx="214" fill="#223a54"/>
-  <path d="M 637 229 C 733 279 789 383 778 506 C 766 654 650 766 512 769 C 369 771 255 666 249 526 C 243 380 351 262 502 257 C 565 255 619 273 670 306" fill="none" stroke="#f7f8f4" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 550 286 C 498 277 434 288 381 323 C 323 361 289 420 280 497" fill="none" stroke="#46d9f2" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 633 218 L 697 322 L 575 320 Z" fill="#f7f8f4"/>
-  <path d="M 430 391 L 650 391 L 650 455 L 539 455 L 539 529 L 649 529 L 649 593 L 539 593 L 539 778 L 430 778 Z" fill="#f7f8f4"/>
-</svg>
