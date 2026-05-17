@@ -11,6 +11,8 @@ async function initSuaveForgeLogo(root) {
     const status = root.querySelector("#status");
     const replay = root.querySelector("#replay");
     const finalOnly = root.querySelector("#finalOnly");
+    const suaveText = root.querySelector(".wordmark-suave");
+    const forgeText = root.querySelector(".wordmark-forge");
     const pathsToDraw = ["#ringPath", "#innerArc", "#sTop", "#sBottom", "#impactRing"];
 
     function preparePath(selector) {
@@ -28,7 +30,22 @@ async function initSuaveForgeLogo(root) {
       gsap.set("#fTool", { opacity: 0 });
       gsap.set("#originalLogo", { opacity: 0, scale: 1, transformOrigin: "512px 512px" });
       gsap.set("#exactFinalLogo", { opacity: 1, scale: 1, transformOrigin: "512px 512px" });
+      gsap.set(suaveText, { opacity: 1, x: -17, y: 0 });
+      gsap.set(forgeText, { opacity: 1, x: 17, y: 0 });
       status.textContent = "Final SVG lockup";
+    }
+
+    function animateWordmark() {
+      if (!suaveText || !forgeText) return null;
+
+      gsap.set(suaveText, { opacity: 0, x: 0, y: 8 });
+      gsap.set(forgeText, { opacity: 0, x: 0, y: 8 });
+
+      return gsap.timeline({ defaults: { ease: "power3.out" } })
+        .to(suaveText, { opacity: 1, y: 0, duration: 0.48 }, 0.78)
+        .to(suaveText, { x: -17, duration: 0.42, ease: "power2.inOut" }, 1.78)
+        .to(forgeText, { opacity: 1, y: 0, duration: 0.34 }, 2.12)
+        .fromTo(forgeText, { x: -4 }, { x: 17, duration: 0.48, ease: "power2.out" }, 2.12);
     }
 
     function buildTimeline() {
@@ -115,6 +132,7 @@ async function initSuaveForgeLogo(root) {
     }
 
     let timeline;
+    let wordTimeline;
 
     function play() {
       if (!window.gsap) {
@@ -123,13 +141,16 @@ async function initSuaveForgeLogo(root) {
       }
 
       if (timeline) timeline.kill();
+      if (wordTimeline) wordTimeline.kill();
       timeline = buildTimeline();
+      wordTimeline = animateWordmark();
       timeline.play(0);
     }
 
     replay.addEventListener("click", play);
     finalOnly.addEventListener("click", () => {
       if (timeline) timeline.kill();
+      if (wordTimeline) wordTimeline.kill();
       setFinalState();
     });
 

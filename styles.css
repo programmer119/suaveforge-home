@@ -585,15 +585,25 @@ body.menu-open {
 .art-device .suaveforge-logo-motion .wordmark {
   position: absolute;
   left: 50%;
-  top: 67%;
+  top: 69%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: min(86%, 260px);
   margin: 0;
   color: rgba(255, 255, 255, 0.92);
-  font-size: 17px;
-  font-weight: 900;
+  font-size: clamp(24px, 2.5vw, 34px);
+  font-weight: 950;
   letter-spacing: 0.08em;
   text-transform: lowercase;
   transform: translate(-50%, -50%);
   text-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+.art-device .suaveforge-logo-motion .wordmark-part {
+  display: inline-block;
+  opacity: 0;
+  will-change: opacity, transform;
 }
 
 .art-badge {
