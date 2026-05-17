@@ -8,8 +8,8 @@
       name="description"
       content="SuaveForge는 게임, 시뮬레이션, 트레이딩 시스템, 웹 서비스를 빠르고 유연하게 제작하는 5인 개발팀입니다."
     />
-    <link rel="stylesheet" href="styles.css?v=0517135425-008" />
-    <link rel="stylesheet" href="assets/logo-motion/suaveforge-logo-motion.css?v=0517135425-008" />
+    <link rel="stylesheet" href="styles.css?v=0517135912-009" />
+    <link rel="stylesheet" href="assets/logo-motion/suaveforge-logo-motion.css?v=0517135912-009" />
   </head>
   <body>
     <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-hidden="true" />
@@ -75,39 +75,6 @@
       <a href="#work">Work</a>
     </aside>
 
-    <svg class="svg-defs" aria-hidden="true" focusable="false">
-      <symbol id="forge-symbol" viewBox="0 0 240 240">
-        <defs>
-          <clipPath id="clip-left">
-            <path d="M34 40h85v160H34z" />
-          </clipPath>
-          <clipPath id="clip-right">
-            <path d="M119 40h88v160h-88z" />
-          </clipPath>
-        </defs>
-
-        <g class="s-broken">
-          <text class="s-piece s-left" x="50" y="164" clip-path="url(#clip-left)">S</text>
-          <text class="s-piece s-right" x="50" y="164" clip-path="url(#clip-right)">S</text>
-          <path class="crack" d="M117 58l-16 48 27 12-18 62" />
-        </g>
-
-        <g class="final-ring">
-          <path class="ring-main" d="M191 84a84 84 0 1 0 17 72" />
-          <path class="ring-accent" d="M55 116a67 67 0 0 1 83-61" />
-          <path class="ring-arrow" d="M174 45l32 39-48-2" />
-        </g>
-
-        <g class="wrench-f">
-          <path class="wrench-head" d="M70 66c17-11 40-8 54 8l-32 19 9 37 39 12 19-32c13 17 14 40 1 57-17 22-50 26-72 9-22-17-26-50-9-72l-23-36 14-2z" />
-          <path class="f-stem" d="M116 57v126" />
-          <path class="f-top" d="M116 72h62" />
-          <path class="f-mid" d="M116 124h46" />
-          <path class="grip" d="M95 135h28m-35 15h28m-35 15h28" />
-        </g>
-      </symbol>
-    </svg>
-
     <main>
       <section id="intro" class="intro panel">
         <div class="intro-copy">
@@ -125,6 +92,12 @@
           <div class="art-device">
             <div class="suaveforge-logo-motion hero-motion" data-logo-motion data-svg-src="assets/logo-motion/suaveforge-logo-motion.svg">
               <div class="logo-shell"></div>
+              <p class="wordmark">suaveforge</p>
+              <p class="status" id="status">GSAP timeline: broken S -> F strike -> refresh ring -> final logo</p>
+              <div class="controls">
+                <button id="replay" type="button">Replay</button>
+                <button id="finalOnly" type="button">Final</button>
+              </div>
             </div>
           </div>
           <div class="art-badge heart">♥</div>
@@ -293,7 +266,7 @@
       </section>
     </main>
 
-    <div class="build-version" aria-label="site build version">0517135425-008</div>
+    <div class="build-version" aria-label="site build version">0517135912-009</div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="assets/logo-motion/suaveforge-logo-motion.js"></script>
     <script>

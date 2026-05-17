@@ -8,12 +8,7 @@ async function initSuaveForgeLogo(root) {
       shell.innerHTML = await response.text();
     }
 
-    if (!window.gsap) {
-      root.classList.add("is-static-logo");
-      return;
-    }
-
-    const status = root.querySelector("#status") || { textContent: "" };
+    const status = root.querySelector("#status");
     const replay = root.querySelector("#replay");
     const finalOnly = root.querySelector("#finalOnly");
     const pathsToDraw = ["#ringPath", "#innerArc", "#sTop", "#sBottom", "#impactRing"];
@@ -26,12 +21,13 @@ async function initSuaveForgeLogo(root) {
     }
 
     function setFinalState() {
-      gsap.set(["#sTop", "#sBottom", "#sCut", "#impactRing", ".spark", ".f-highlight", "#fTool"], { opacity: 0 });
+      gsap.set(["#sTop", "#sBottom", "#sCut", "#impactRing", ".spark", ".f-highlight", "#finalF"], { opacity: 0 });
       gsap.set("#motionLayers", { opacity: 1 });
-      gsap.set(["#ringPath", "#innerArc", "#arrowHead", "#finalF"], { opacity: 1, x: 0, y: 0, rotation: 0, scale: 1 });
+      gsap.set(["#ringPath", "#innerArc", "#arrowHead", "#finalF"], { opacity: 0 });
       gsap.set(["#ringPath", "#innerArc"], { strokeDashoffset: 0 });
+      gsap.set("#fTool", { opacity: 0 });
       gsap.set("#originalLogo", { opacity: 0, scale: 1, transformOrigin: "512px 512px" });
-      gsap.set("#exactFinalLogo", { opacity: 0, scale: 1, transformOrigin: "512px 512px" });
+      gsap.set("#exactFinalLogo", { opacity: 1, scale: 1, transformOrigin: "512px 512px" });
       status.textContent = "Final SVG lockup";
     }
 
@@ -111,9 +107,9 @@ async function initSuaveForgeLogo(root) {
         }, 1.86)
         .to("#fTool", { opacity: 0, scale: 0.985, duration: 0.24, ease: "power2.inOut" }, 1.94)
         .to(["#sTop", "#sBottom"], { opacity: 0, duration: 0.2 }, 1.62)
-        .to("#finalF", { opacity: 1, scale: 1, duration: 0.28, ease: "back.out(2)" }, 2.02)
+        .to(["#ringPath", "#innerArc", "#arrowHead"], { opacity: 0, duration: 0.2, ease: "power1.inOut" }, 2.02)
         .to("#originalLogo", { opacity: 0, duration: 0.01 }, 2.02)
-        .to("#exactFinalLogo", { opacity: 0, scale: 1, duration: 0.01 }, 2.04);
+        .to("#exactFinalLogo", { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, 2.04);
 
       return tl;
     }
@@ -131,8 +127,8 @@ async function initSuaveForgeLogo(root) {
       timeline.play(0);
     }
 
-    replay?.addEventListener("click", play);
-    finalOnly?.addEventListener("click", () => {
+    replay.addEventListener("click", play);
+    finalOnly.addEventListener("click", () => {
       if (timeline) timeline.kill();
       setFinalState();
     });
