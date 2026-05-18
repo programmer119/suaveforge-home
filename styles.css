@@ -528,8 +528,8 @@ body.menu-open .menu-panel,
 .art-device {
   position: absolute;
   left: 20%;
-  top: 18%;
-  width: min(32vw, 360px);
+  top: 3%;
+  width: min(30vw, 340px);
   aspect-ratio: 0.72;
   z-index: 2;
   border: 12px solid #d7b2ff;
@@ -600,11 +600,11 @@ body.menu-open .menu-panel,
 
 .platform-tags {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 42%;
+  top: 38%;
   z-index: 3;
   display: flex;
-  width: min(82%, 520px);
+  width: min(88%, 250px);
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px 12px;
@@ -656,6 +656,15 @@ body.menu-open .menu-panel,
   grid-template-columns: minmax(200px, 0.32fr) minmax(0, 1fr);
   gap: clamp(36px, 6vw, 90px);
   align-items: start;
+}
+
+.stats-grid,
+.logo-list,
+.service-grid,
+.process-grid,
+.featured-work,
+.contact-card {
+  grid-column: 2;
 }
 
 .section-title h2 {
@@ -1128,6 +1137,15 @@ ul {
   .service-grid,
   .process-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  }
+
+  .stats-grid,
+  .logo-list,
+  .service-grid,
+  .process-grid,
+  .featured-work,
+  .contact-card {
+    grid-column: auto;
   }
 
   .logo-list {
