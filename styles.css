@@ -90,31 +90,78 @@ a {
 .brand-mark {
   display: inline-grid;
   place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
-  box-shadow: 0 8px 18px rgba(24, 32, 40, 0.12);
-  overflow: hidden;
+  width: 34px;
+  height: 34px;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
 }
 
 .brand-mark .logo-shell {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
   min-width: 0;
-  border-radius: 9px;
-  background: linear-gradient(135deg, #263f5c, #1a2c42);
-  box-shadow: none;
+  aspect-ratio: 1 !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 .brand-mark .motion-logo {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  transform: scale(1.02);
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+  transform: scale(1.02) !important;
 }
 
-.brand-mark .exact-final {
-  fill: #f7f8f4;
+.brand-mark #originalLogo,
+.brand-mark #exactFinalLogo,
+.brand-mark #sTop,
+.brand-mark #sBottom,
+.brand-mark #sCut,
+.brand-mark #impactRing,
+.brand-mark .spark,
+.brand-mark .f-highlight,
+.brand-mark #fTool {
+  opacity: 0 !important;
+}
+
+.brand-mark #motionLayers {
+  opacity: 1 !important;
+}
+
+.brand-mark #ringPath,
+.brand-mark #innerArc {
+  opacity: 1 !important;
+  stroke-dashoffset: 0 !important;
+}
+
+.brand-mark #arrowHead,
+.brand-mark #finalF {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.brand-mark .draw-ring {
+  fill: none !important;
+  stroke: #263f5c !important;
+  stroke-width: 62 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+.brand-mark .inner-arc {
+  fill: none !important;
+  stroke: #46d9f2 !important;
+  stroke-width: 24 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+.brand-mark .arrow-head,
+.brand-mark .final-f {
+  fill: #263f5c !important;
 }
 
 .menu-trigger {
@@ -616,6 +663,36 @@ body.menu-open {
   flex: 0 0 auto;
   opacity: 0;
   will-change: opacity, transform;
+}
+
+.platform-tags {
+  position: absolute;
+  left: 50%;
+  top: 88%;
+  z-index: 2;
+  display: flex;
+  width: min(92%, 290px);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  transform: translateX(-50%);
+}
+
+.platform-tags span {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
 }
 
 .art-platform {
