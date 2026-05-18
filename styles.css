@@ -527,15 +527,16 @@ body.menu-open .menu-panel,
 
 .art-device {
   position: absolute;
-  left: 20%;
-  top: 3%;
-  width: min(30vw, 340px);
+  left: 50%;
+  top: 9%;
+  width: min(30vw, 360px);
   aspect-ratio: 0.72;
   z-index: 2;
   border: 12px solid #d7b2ff;
   border-radius: 28px;
   background: linear-gradient(135deg, #365a82, #203451);
   box-shadow: 0 28px 58px rgba(0, 0, 0, 0.28);
+  transform: translateX(-50%);
 }
 
 .art-device .hero-logo {
@@ -600,8 +601,8 @@ body.menu-open .menu-panel,
 
 .platform-tags {
   position: absolute;
-  left: 42%;
-  top: 38%;
+  left: 50%;
+  top: 45%;
   z-index: 3;
   display: flex;
   width: min(88%, 250px);
@@ -634,8 +635,8 @@ body.menu-open .menu-panel,
 
 .art-platform {
   position: absolute;
-  left: 6%;
-  right: -2%;
+  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 1;
   height: 22%;
