@@ -109,46 +109,6 @@ a {
   transform: scale(1.02) !important;
 }
 
-.brand-mark #originalLogo,
-.brand-mark #sTop,
-.brand-mark #sBottom,
-.brand-mark #sCut,
-.brand-mark #impactRing,
-.brand-mark .spark,
-.brand-mark .f-highlight,
-.brand-mark #fTool {
-  opacity: 0 !important;
-}
-
-.brand-mark #exactFinalLogo {
-  opacity: 0 !important;
-}
-
-.brand-mark #motionLayers,
-.brand-mark #ringPath,
-.brand-mark #innerArc,
-.brand-mark #arrowHead,
-.brand-mark #fTool {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-.brand-mark #ringPath,
-.brand-mark #innerArc {
-  stroke: #263f5c !important;
-  stroke-dashoffset: 0 !important;
-}
-
-.brand-mark #arrowHead,
-.brand-mark #fTool {
-  fill: #263f5c !important;
-  filter: none !important;
-}
-
-.brand-mark #innerArc {
-  opacity: 0.9 !important;
-}
-
 .menu-trigger {
   position: relative;
   display: grid;

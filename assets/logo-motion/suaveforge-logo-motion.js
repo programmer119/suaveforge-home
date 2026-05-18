@@ -3,26 +3,24 @@ document.querySelectorAll(".suaveforge-logo-motion").forEach(initSuaveForgeLogo)
 async function initSuaveForgeLogo(root) {
   const shell = root.querySelector(".logo-shell") || root;
   const svgSrc = root.dataset.svgSrc;
+
   if (svgSrc && !root.querySelector(".motion-logo")) {
     const response = await fetch(svgSrc);
     shell.innerHTML = await response.text();
   }
 
-  const status = root.querySelector("#status") || { textContent: "" };
-  if (!window.gsap) {
-    status.textContent = "GSAP CDN을 불러오지 못했습니다. 네트워크 연결을 확인해 주세요.";
-    return;
-  }
+  if (!window.gsap) return;
 
   const q = gsap.utils.selector(root);
   const replay = root.querySelector("#replay");
   const finalOnly = root.querySelector("#finalOnly");
-  const suaveText = root.querySelector(".wordmark-suave");
-  const forgeText = root.querySelector(".wordmark-forge");
+  const status = root.querySelector("#status");
   const pathsToDraw = ["#ringPath", "#innerArc", "#sTop", "#sBottom", "#impactRing"];
+  let timeline;
 
   function preparePath(selector) {
     const path = root.querySelector(selector);
+    if (!path) return 0;
     const length = path.getTotalLength();
     gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
     return length;
@@ -30,44 +28,17 @@ async function initSuaveForgeLogo(root) {
 
   function setFinalState() {
     gsap.set(q("#sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #finalF"), { opacity: 0 });
-    gsap.set(q("#motionLayers"), { opacity: 1 });
-    gsap.set(q("#ringPath, #innerArc, #arrowHead, #fTool"), { opacity: 1 });
+    gsap.set(q("#motionLayers, #ringPath, #innerArc, #arrowHead, #fTool"), { opacity: 1 });
     gsap.set(q("#finalF"), { opacity: 0 });
     gsap.set(q("#ringPath, #innerArc"), { strokeDashoffset: 0 });
-    gsap.set(q("#exactFinalLogo"), { opacity: 0, scale: 1, transformOrigin: "512px 512px" });
-    gsap.set(q("#originalLogo"), { opacity: 0, scale: 1, transformOrigin: "512px 512px" });
-    if (suaveText) gsap.set(suaveText, { opacity: 1, x: -4, y: 0 });
-    if (forgeText) gsap.set(forgeText, { opacity: 1, x: 4, y: 0 });
-    status.textContent = "Final SVG lockup";
-  }
-
-  function setStaticMarkState() {
-    gsap.set(q("#originalLogo, #sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #finalF"), { opacity: 0 });
-    gsap.set(q("#motionLayers, #ringPath, #innerArc, #arrowHead, #fTool"), { opacity: 1 });
-    gsap.set(q("#ringPath, #innerArc"), { strokeDashoffset: 0 });
-    gsap.set(q("#exactFinalLogo"), { opacity: 0, x: 0, y: 0, rotation: 0, scale: 1, transformOrigin: "512px 512px" });
     gsap.set(q("#fTool"), { x: 0, y: 0, rotation: 0, scale: 1, transformOrigin: "58% 82%" });
-  }
-
-  function animateWordmark() {
-    if (!suaveText || !forgeText) return null;
-
-    gsap.set(suaveText, { opacity: 0, x: 0, y: 8 });
-    gsap.set(forgeText, { opacity: 0, x: 0, y: 8 });
-
-    return gsap.timeline({ defaults: { ease: "power3.out" } })
-      .to(suaveText, { opacity: 1, y: 0, duration: 0.48 }, 0.78)
-      .to(suaveText, { x: -4, duration: 0.42, ease: "power2.inOut" }, 1.78)
-      .to(forgeText, { opacity: 1, y: 0, duration: 0.34 }, 2.12)
-      .fromTo(forgeText, { x: -2 }, { x: 4, duration: 0.48, ease: "power2.out" }, 2.12);
+    if (status) status.textContent = "Final SVG lockup";
   }
 
   function buildTimeline() {
     pathsToDraw.forEach(preparePath);
 
     gsap.set(q("#motionLayers"), { opacity: 1 });
-    gsap.set(q("#originalLogo"), { opacity: 0, scale: 0.98, transformOrigin: "512px 512px" });
-    gsap.set(q("#exactFinalLogo"), { opacity: 0, scale: 0.985, transformOrigin: "512px 512px" });
     gsap.set(q("#ringPath, #innerArc, #arrowHead, #finalF"), { opacity: 0 });
     gsap.set(q(".f-highlight"), { opacity: 0 });
     gsap.set(q("#fTool"), {
@@ -91,8 +62,8 @@ async function initSuaveForgeLogo(root) {
 
     const tl = gsap.timeline({
       defaults: { ease: "power3.out" },
-      onStart: () => { status.textContent = "Forging Suaveforge mark"; },
-      onComplete: () => { status.textContent = "Final SVG lockup"; }
+      onStart: () => { if (status) status.textContent = "Forging Suaveforge mark"; },
+      onComplete: () => { if (status) status.textContent = "Final SVG lockup"; }
     });
 
     tl.to(q("#sTop"), { opacity: 1, strokeDashoffset: 0, duration: 0.34 }, 0)
@@ -138,34 +109,28 @@ async function initSuaveForgeLogo(root) {
       }, 1.86)
       .to(q("#fTool"), { opacity: 1, scale: 1, duration: 0.24, ease: "power2.inOut" }, 1.94)
       .to(q("#sTop, #sBottom"), { opacity: 0, duration: 0.2 }, 1.62)
-      .to(q("#exactFinalLogo"), { opacity: 0, duration: 0.01 }, 2.02)
-      .to(q("#originalLogo, #finalF"), { opacity: 0, duration: 0.01 }, 2.02)
+      .to(q("#finalF"), { opacity: 0, duration: 0.01 }, 2.02)
       .to(q("#ringPath, #innerArc, #arrowHead, #fTool"), { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, 2.04);
 
     return tl;
   }
 
-  let timeline;
-  let wordTimeline;
-
   function play() {
+    if (timeline) timeline.kill();
+    pathsToDraw.forEach(preparePath);
+
     if (root.dataset.staticLogo !== undefined) {
-      pathsToDraw.forEach(preparePath);
-      setStaticMarkState();
+      setFinalState();
       return;
     }
 
-    if (timeline) timeline.kill();
-    if (wordTimeline) wordTimeline.kill();
     timeline = buildTimeline();
-    wordTimeline = animateWordmark();
     timeline.play(0);
   }
 
   replay?.addEventListener("click", play);
   finalOnly?.addEventListener("click", () => {
     if (timeline) timeline.kill();
-    if (wordTimeline) wordTimeline.kill();
     setFinalState();
   });
 
