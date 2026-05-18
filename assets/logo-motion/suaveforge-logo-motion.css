@@ -38,6 +38,12 @@
       overflow: visible;
     }
 
+    .suaveforge-logo-motion .ghost-mark {
+      opacity: 0;
+      transform-origin: 512px 512px;
+      fill: var(--light-ink);
+    }
+
     .suaveforge-logo-motion .draw-ring,
     .suaveforge-logo-motion .inner-arc,
     .suaveforge-logo-motion .broken-s {
@@ -96,6 +102,12 @@
       stroke-linejoin: round;
       opacity: 0;
       filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.34));
+    }
+
+    .suaveforge-logo-motion .exact-final {
+      opacity: 0;
+      fill: var(--light-ink);
+      transform-origin: 512px 512px;
     }
 
     .suaveforge-logo-motion .impact-ring {

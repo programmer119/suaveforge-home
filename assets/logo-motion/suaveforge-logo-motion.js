@@ -29,17 +29,20 @@ async function initSuaveForgeLogo(root) {
   }
 
   function setFinalState() {
-    gsap.set(q("#sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #fTool"), { opacity: 0 });
+    gsap.set(q("#sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #finalF"), { opacity: 0 });
     gsap.set(q("#motionLayers"), { opacity: 1 });
-    gsap.set(q("#ringPath, #innerArc"), { opacity: 1, strokeDashoffset: 0 });
-    gsap.set(q("#arrowHead, #finalF"), { opacity: 1, x: 0, y: 0, rotation: 0, scale: 1 });
+    gsap.set(q("#ringPath, #innerArc, #arrowHead, #finalF"), { opacity: 0 });
+    gsap.set(q("#ringPath, #innerArc"), { strokeDashoffset: 0 });
+    gsap.set(q("#fTool"), { opacity: 0 });
+    gsap.set(q("#originalLogo"), { opacity: 0, scale: 1, transformOrigin: "512px 512px" });
+    gsap.set(q("#exactFinalLogo"), { opacity: 1, scale: 1, transformOrigin: "512px 512px" });
     if (suaveText) gsap.set(suaveText, { opacity: 1, x: -4, y: 0 });
     if (forgeText) gsap.set(forgeText, { opacity: 1, x: 4, y: 0 });
     status.textContent = "Final SVG lockup";
   }
 
   function setStaticMarkState() {
-    gsap.set(q("#sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #fTool"), { opacity: 0 });
+    gsap.set(q("#originalLogo, #exactFinalLogo, #sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #fTool"), { opacity: 0 });
     gsap.set(q("#motionLayers"), { opacity: 1 });
     gsap.set(q("#ringPath, #innerArc"), { opacity: 1, strokeDashoffset: 0 });
     gsap.set(q("#arrowHead, #finalF"), { opacity: 1, x: 0, y: 0, rotation: 0, scale: 1 });
@@ -62,6 +65,8 @@ async function initSuaveForgeLogo(root) {
     pathsToDraw.forEach(preparePath);
 
     gsap.set(q("#motionLayers"), { opacity: 1 });
+    gsap.set(q("#originalLogo"), { opacity: 0, scale: 0.98, transformOrigin: "512px 512px" });
+    gsap.set(q("#exactFinalLogo"), { opacity: 0, scale: 0.985, transformOrigin: "512px 512px" });
     gsap.set(q("#ringPath, #innerArc, #arrowHead, #finalF"), { opacity: 0 });
     gsap.set(q(".f-highlight"), { opacity: 0 });
     gsap.set(q("#fTool"), {
@@ -132,8 +137,9 @@ async function initSuaveForgeLogo(root) {
       }, 1.86)
       .to(q("#fTool"), { opacity: 0, scale: 0.985, duration: 0.24, ease: "power2.inOut" }, 1.94)
       .to(q("#sTop, #sBottom"), { opacity: 0, duration: 0.2 }, 1.62)
-      .to(q("#finalF"), { opacity: 1, scale: 1, duration: 0.28, ease: "back.out(2)" }, 2.02)
-      .to(q("#ringPath, #innerArc, #arrowHead"), { opacity: 1, duration: 0.18, ease: "power1.out" }, 2.02);
+      .to(q("#ringPath, #innerArc, #arrowHead"), { opacity: 0, duration: 0.2, ease: "power1.inOut" }, 2.02)
+      .to(q("#originalLogo"), { opacity: 0, duration: 0.01 }, 2.02)
+      .to(q("#exactFinalLogo"), { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, 2.04);
 
     return tl;
   }
