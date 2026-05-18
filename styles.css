@@ -110,7 +110,7 @@ a {
 }
 
 .brand-mark #originalLogo,
-.brand-mark #exactFinalLogo,
+.brand-mark #motionLayers,
 .brand-mark #sTop,
 .brand-mark #sBottom,
 .brand-mark #sCut,
@@ -121,40 +121,12 @@ a {
   opacity: 0 !important;
 }
 
-.brand-mark #motionLayers {
-  opacity: 1 !important;
-}
-
-.brand-mark #ringPath,
-.brand-mark #innerArc {
-  opacity: 1 !important;
-  stroke-dashoffset: 0 !important;
-}
-
-.brand-mark #arrowHead,
-.brand-mark #finalF {
+.brand-mark #exactFinalLogo {
   opacity: 1 !important;
   transform: none !important;
 }
 
-.brand-mark .draw-ring {
-  fill: none !important;
-  stroke: #263f5c !important;
-  stroke-width: 62 !important;
-  stroke-linecap: round !important;
-  stroke-linejoin: round !important;
-}
-
-.brand-mark .inner-arc {
-  fill: none !important;
-  stroke: #46d9f2 !important;
-  stroke-width: 24 !important;
-  stroke-linecap: round !important;
-  stroke-linejoin: round !important;
-}
-
-.brand-mark .arrow-head,
-.brand-mark .final-f {
+.brand-mark .exact-final {
   fill: #263f5c !important;
 }
 
