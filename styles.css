@@ -86,9 +86,11 @@ a {
   place-items: center;
   width: 34px;
   height: 34px;
-  border-radius: 0;
-  box-shadow: none;
-  overflow: visible;
+  padding: 4px;
+  border-radius: 4px;
+  background: #161c1d;
+  box-shadow: 0 8px 16px rgba(16, 18, 20, 0.14);
+  overflow: hidden;
 }
 
 .brand-mark .logo-shell {
@@ -107,6 +109,15 @@ a {
   height: 100% !important;
   overflow: visible !important;
   transform: scale(1.02) !important;
+}
+
+.brand-mark #motionLayers,
+.brand-mark #originalLogo {
+  opacity: 0 !important;
+}
+
+.brand-mark #exactFinalLogo {
+  opacity: 1 !important;
 }
 
 .menu-trigger {
