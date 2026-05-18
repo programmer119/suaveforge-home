@@ -443,6 +443,7 @@ body.menu-open .menu-panel,
   top: 77%;
   z-index: 2;
   display: flex;
+  column-gap: 0.18em;
   justify-content: center;
   width: max-content;
   margin: 0;
@@ -459,7 +460,7 @@ body.menu-open .menu-panel,
 .art-device .suaveforge-logo-motion .wordmark-part {
   display: inline-block;
   flex: 0 0 auto;
-  opacity: 0;
+  opacity: 1;
   will-change: opacity, transform;
 }
 
