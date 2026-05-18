@@ -617,22 +617,26 @@ body.menu-open .menu-panel,
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(190px, 1fr));
   gap: 1px;
   background: rgba(245, 241, 232, 0.18);
 }
 
 .stats-grid article {
   min-height: 250px;
-  padding: 26px;
+  min-width: 0;
+  padding: clamp(22px, 2vw, 30px);
   background: var(--dark);
 }
 
 .stats-grid strong {
   display: block;
   margin-bottom: 16px;
-  font-size: clamp(42px, 5.3vw, 82px);
-  line-height: 0.9;
+  max-width: 100%;
+  font-size: clamp(34px, 3.1vw, 52px);
+  line-height: 0.96;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 .stats-grid h3 {
@@ -874,6 +878,15 @@ ul {
 
   .panel {
     padding-inline: clamp(28px, 7vw, 86px);
+  }
+
+  .intro {
+    grid-template-columns: minmax(320px, 0.44fr) minmax(0, 1fr);
+    gap: clamp(24px, 4vw, 44px);
+  }
+
+  .intro-art {
+    min-width: 0;
   }
 
   .team-board,
