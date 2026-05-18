@@ -601,6 +601,17 @@ body.menu-open .menu-panel,
   color: var(--muted);
 }
 
+.featured-work span a {
+  color: var(--accent);
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.featured-work span a:hover {
+  text-decoration: underline;
+}
+
 .dark {
   background: var(--dark);
   color: var(--paper);
