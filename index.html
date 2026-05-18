@@ -11,24 +11,24 @@
     <script>
       (() => {
         const noInfoHost = location.hostname === "noinfo.suaveforge.com";
-        const temporaryWwwNoInfo =
-          location.hostname === "www.suaveforge.com" &&
+        const temporaryPublicNoInfo =
+          (location.hostname === "www.suaveforge.com" || location.hostname === "suaveforge.com") &&
           Date.now() < new Date("2026-06-01T00:00:00+09:00").getTime();
         const noInfoQuery = new URLSearchParams(location.search).has("noinfo");
         const noInfoPath = location.pathname.replace(/\/+$/, "") === "/noinfo";
-        if (noInfoHost || temporaryWwwNoInfo || noInfoQuery || noInfoPath) {
+        if (noInfoHost || temporaryPublicNoInfo || noInfoQuery || noInfoPath) {
           document.documentElement.classList.add("noinfo-mode");
         }
       })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=0518155908-065" />
-    <link rel="stylesheet" href="assets/logo-motion/suaveforge-logo-motion.css?v=0518155908-065" />
+    <link rel="stylesheet" href="styles.css?v=0518156501-066" />
+    <link rel="stylesheet" href="assets/logo-motion/suaveforge-logo-motion.css?v=0518156501-066" />
   </head>
   <body>
     <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-hidden="true" />
     <header class="topbar">
       <a class="brand" href="#intro" aria-label="SuaveForge home">
-        <span class="suaveforge-logo-motion brand-mark" data-static-logo data-svg-src="assets/logo-motion/suaveforge-logo-motion.svg?v=0518155908-065">
+        <span class="suaveforge-logo-motion brand-mark" data-static-logo data-svg-src="assets/logo-motion/suaveforge-logo-motion.svg?v=0518156501-066">
           <span class="logo-shell"></span>
         </span>
         <span>SuaveForge</span>
@@ -87,7 +87,7 @@
           <div class="art-line one"></div>
           <div class="art-line two"></div>
           <div class="art-device">
-            <div class="suaveforge-logo-motion hero-motion" data-logo-motion data-svg-src="assets/logo-motion/suaveforge-logo-motion.svg?v=0518155908-065">
+            <div class="suaveforge-logo-motion hero-motion" data-logo-motion data-svg-src="assets/logo-motion/suaveforge-logo-motion.svg?v=0518156501-066">
               <div class="logo-shell"></div>
               <p class="wordmark" aria-label="suaveforge">
                 <span class="wordmark-part wordmark-suave">suave</span>
@@ -274,9 +274,9 @@
       </section>
     </main>
 
-    <div class="build-version" aria-label="site build version">0518155908-065</div>
+    <div class="build-version" aria-label="site build version">0518156501-066</div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="assets/logo-motion/suaveforge-logo-motion.js?v=0518155908-065"></script>
+    <script src="assets/logo-motion/suaveforge-logo-motion.js?v=0518156501-066"></script>
     <script>
       (() => {
         const menuToggle = document.querySelector("#menu-toggle");
