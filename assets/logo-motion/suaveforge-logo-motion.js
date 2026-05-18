@@ -42,10 +42,9 @@ async function initSuaveForgeLogo(root) {
   }
 
   function setStaticMarkState() {
-    gsap.set(q("#originalLogo, #exactFinalLogo, #sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #fTool"), { opacity: 0 });
-    gsap.set(q("#motionLayers"), { opacity: 1 });
-    gsap.set(q("#ringPath, #innerArc"), { opacity: 1, strokeDashoffset: 0 });
-    gsap.set(q("#arrowHead, #finalF"), { opacity: 1, x: 0, y: 0, rotation: 0, scale: 1 });
+    gsap.set(q("#originalLogo, #motionLayers, #sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #fTool, #finalF"), { opacity: 0 });
+    gsap.set(q("#ringPath, #innerArc, #arrowHead"), { opacity: 0 });
+    gsap.set(q("#exactFinalLogo"), { opacity: 1, x: 0, y: 0, rotation: 0, scale: 1, transformOrigin: "512px 512px" });
   }
 
   function animateWordmark() {
