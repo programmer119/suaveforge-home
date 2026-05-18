@@ -1214,12 +1214,12 @@ ul {
   }
 
   .intro-art {
-    min-height: 570px;
+    min-height: 510px;
   }
 
   .art-device {
     left: 50%;
-    top: 44px;
+    top: 52px;
     width: min(68vw, 285px);
     border-width: 10px;
     border-radius: 26px;
@@ -1234,12 +1234,12 @@ ul {
   .art-platform {
     left: 0;
     right: 0;
-    height: 28%;
+    height: 20%;
   }
 
   .platform-tags {
     left: 50%;
-    top: 50%;
+    top: 56%;
     width: min(78vw, 250px);
   }
 
