@@ -880,6 +880,19 @@ ul {
   line-height: 1.68;
 }
 
+.client-grid.company-only article {
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  padding: 24px 28px;
+}
+
+.client-grid.company-only span {
+  margin: 0;
+  font-size: clamp(20px, 2vw, 28px);
+  letter-spacing: 0;
+}
+
 .featured-work {
   display: grid;
   gap: 20px;
