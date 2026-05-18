@@ -333,19 +333,6 @@ body.menu-open {
   position: relative;
 }
 
-.side-nav a.active::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  transform: translate(-25%, -50%);
-  background: rgba(255, 255, 255, 0.75);
-}
-
 .forge-mark {
   display: block;
   overflow: visible;
@@ -561,8 +548,8 @@ body.menu-open {
 .art-device {
   position: absolute;
   left: 20%;
-  top: 28%;
-  width: min(38vw, 420px);
+  top: 18%;
+  width: min(32vw, 360px);
   aspect-ratio: 0.72;
   z-index: 2;
   border: 12px solid #d7b2ff;
