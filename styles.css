@@ -110,7 +110,6 @@ a {
 }
 
 .brand-mark #originalLogo,
-.brand-mark #motionLayers,
 .brand-mark #sTop,
 .brand-mark #sBottom,
 .brand-mark #sCut,
@@ -122,12 +121,32 @@ a {
 }
 
 .brand-mark #exactFinalLogo {
+  opacity: 0 !important;
+}
+
+.brand-mark #motionLayers,
+.brand-mark #ringPath,
+.brand-mark #innerArc,
+.brand-mark #arrowHead,
+.brand-mark #fTool {
   opacity: 1 !important;
   transform: none !important;
 }
 
-.brand-mark .exact-final {
+.brand-mark #ringPath,
+.brand-mark #innerArc {
+  stroke: #263f5c !important;
+  stroke-dashoffset: 0 !important;
+}
+
+.brand-mark #arrowHead,
+.brand-mark #fTool {
   fill: #263f5c !important;
+  filter: none !important;
+}
+
+.brand-mark #innerArc {
+  opacity: 0.9 !important;
 }
 
 .menu-trigger {
@@ -1215,13 +1234,13 @@ ul {
   }
 
   .intro-art {
-    min-height: 510px;
+    min-height: 540px;
   }
 
   .art-device {
     left: 50%;
-    top: 52px;
-    width: min(68vw, 285px);
+    top: 38px;
+    width: min(62vw, 255px);
     border-width: 10px;
     border-radius: 26px;
     transform: translateX(-50%);
@@ -1235,12 +1254,12 @@ ul {
   .art-platform {
     left: 0;
     right: 0;
-    height: 20%;
+    height: 24%;
   }
 
   .platform-tags {
     left: 50%;
-    top: 56%;
+    top: 50%;
     width: min(78vw, 250px);
   }
 

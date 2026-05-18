@@ -31,20 +31,22 @@ async function initSuaveForgeLogo(root) {
   function setFinalState() {
     gsap.set(q("#sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #finalF"), { opacity: 0 });
     gsap.set(q("#motionLayers"), { opacity: 1 });
-    gsap.set(q("#ringPath, #innerArc, #arrowHead, #finalF"), { opacity: 0 });
+    gsap.set(q("#ringPath, #innerArc, #arrowHead, #fTool"), { opacity: 1 });
+    gsap.set(q("#finalF"), { opacity: 0 });
     gsap.set(q("#ringPath, #innerArc"), { strokeDashoffset: 0 });
-    gsap.set(q("#fTool"), { opacity: 0 });
+    gsap.set(q("#exactFinalLogo"), { opacity: 0, scale: 1, transformOrigin: "512px 512px" });
     gsap.set(q("#originalLogo"), { opacity: 0, scale: 1, transformOrigin: "512px 512px" });
-    gsap.set(q("#exactFinalLogo"), { opacity: 1, scale: 1, transformOrigin: "512px 512px" });
     if (suaveText) gsap.set(suaveText, { opacity: 1, x: -4, y: 0 });
     if (forgeText) gsap.set(forgeText, { opacity: 1, x: 4, y: 0 });
     status.textContent = "Final SVG lockup";
   }
 
   function setStaticMarkState() {
-    gsap.set(q("#originalLogo, #motionLayers, #sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #fTool, #finalF"), { opacity: 0 });
-    gsap.set(q("#ringPath, #innerArc, #arrowHead"), { opacity: 0 });
-    gsap.set(q("#exactFinalLogo"), { opacity: 1, x: 0, y: 0, rotation: 0, scale: 1, transformOrigin: "512px 512px" });
+    gsap.set(q("#originalLogo, #sTop, #sBottom, #sCut, #impactRing, .spark, .f-highlight, #finalF"), { opacity: 0 });
+    gsap.set(q("#motionLayers, #ringPath, #innerArc, #arrowHead, #fTool"), { opacity: 1 });
+    gsap.set(q("#ringPath, #innerArc"), { strokeDashoffset: 0 });
+    gsap.set(q("#exactFinalLogo"), { opacity: 0, x: 0, y: 0, rotation: 0, scale: 1, transformOrigin: "512px 512px" });
+    gsap.set(q("#fTool"), { x: 0, y: 0, rotation: 0, scale: 1, transformOrigin: "58% 82%" });
   }
 
   function animateWordmark() {
@@ -134,11 +136,11 @@ async function initSuaveForgeLogo(root) {
         stagger: 0.04,
         ease: "power2.in"
       }, 1.86)
-      .to(q("#fTool"), { opacity: 0, scale: 0.985, duration: 0.24, ease: "power2.inOut" }, 1.94)
+      .to(q("#fTool"), { opacity: 1, scale: 1, duration: 0.24, ease: "power2.inOut" }, 1.94)
       .to(q("#sTop, #sBottom"), { opacity: 0, duration: 0.2 }, 1.62)
-      .to(q("#ringPath, #innerArc, #arrowHead"), { opacity: 0, duration: 0.2, ease: "power1.inOut" }, 2.02)
-      .to(q("#originalLogo"), { opacity: 0, duration: 0.01 }, 2.02)
-      .to(q("#exactFinalLogo"), { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, 2.04);
+      .to(q("#exactFinalLogo"), { opacity: 0, duration: 0.01 }, 2.02)
+      .to(q("#originalLogo, #finalF"), { opacity: 0, duration: 0.01 }, 2.02)
+      .to(q("#ringPath, #innerArc, #arrowHead, #fTool"), { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(2)" }, 2.04);
 
     return tl;
   }
