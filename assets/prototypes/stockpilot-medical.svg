@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 900" role="img" aria-labelledby="title desc">
+  <title id="title">StockPilot medical inventory prototype preview</title>
+  <desc id="desc">A medical inventory, purchase and reporting automation admin dashboard preview.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3f8fb"/>
+      <stop offset="1" stop-color="#eef7f4"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f3443"/>
+      <stop offset="1" stop-color="#10202d"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" x2="1">
+      <stop offset="0" stop-color="#0aa39a"/>
+      <stop offset="1" stop-color="#235a7d"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#0f3443" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1425" height="900" rx="28" fill="url(#bg)"/>
+  <g transform="translate(50 54)" filter="url(#shadow)">
+    <rect width="1325" height="792" rx="26" fill="#ffffff"/>
+    <rect width="232" height="792" rx="26" fill="url(#side)"/>
+    <rect x="208" width="24" height="792" fill="#10202d"/>
+    <g font-family="Inter, Arial, sans-serif">
+      <rect x="34" y="38" width="42" height="42" rx="12" fill="#0aa39a"/>
+      <text x="55" y="66" text-anchor="middle" font-size="19" font-weight="900" fill="#ffffff">RX</text>
+      <text x="92" y="56" font-size="22" font-weight="900" fill="#ffffff">StockPilot</text>
+      <text x="92" y="80" font-size="13" font-weight="800" fill="#9ab5bf">의약품 재고 자동화</text>
+      <g font-size="17" font-weight="900" fill="#c9dce2">
+        <text x="38" y="158">대시보드</text>
+        <text x="38" y="216">부족 재고</text>
+        <text x="38" y="274">도매몰 자동화</text>
+        <text x="38" y="332">신고/보고서</text>
+        <text x="38" y="390">스케줄 설정</text>
+      </g>
+      <rect x="30" y="660" width="172" height="78" rx="18" fill="#183c4e"/>
+      <text x="52" y="690" font-size="13" font-weight="900" fill="#9ab5bf">현재 작업</text>
+      <text x="52" y="714" font-size="15" font-weight="900" fill="#ffffff">재고 엑셀 파싱</text>
+      <text x="52" y="734" font-size="13" font-weight="800" fill="#63e0d5">71% 완료</text>
+    </g>
+    <g transform="translate(278 58)" font-family="Inter, Arial, sans-serif">
+      <text x="0" y="0" font-size="15" font-weight="900" fill="#0aa39a">관리자 콘솔</text>
+      <text x="0" y="58" font-size="44" font-weight="900" fill="#142837">재고 감시부터 신고까지 한 번에 제어</text>
+      <g transform="translate(0 106)">
+        <rect width="226" height="114" rx="24" fill="#f8fbfc" stroke="#dce8eb"/>
+        <text x="28" y="36" font-size="14" font-weight="900" fill="#7b8f96">감시 품목</text>
+        <text x="28" y="80" font-size="38" font-weight="900" fill="#142837">1,284</text>
+        <rect x="252" width="226" height="114" rx="24" fill="#fff6f3" stroke="#f2ded8"/>
+        <text x="280" y="36" font-size="14" font-weight="900" fill="#9d7067">부족 품목</text>
+        <text x="280" y="80" font-size="38" font-weight="900" fill="#d35237">38</text>
+        <rect x="504" width="226" height="114" rx="24" fill="#f8fbfc" stroke="#dce8eb"/>
+        <text x="532" y="36" font-size="14" font-weight="900" fill="#7b8f96">장바구니 적재</text>
+        <text x="532" y="80" font-size="38" font-weight="900" fill="#142837">82%</text>
+        <rect x="756" width="226" height="114" rx="24" fill="#eef9f7" stroke="#cdebe7"/>
+        <text x="784" y="36" font-size="14" font-weight="900" fill="#60827d">다음 신고</text>
+        <text x="784" y="80" font-size="38" font-weight="900" fill="#0aa39a">17:00</text>
+      </g>
+      <g transform="translate(0 266)">
+        <rect width="632" height="318" rx="24" fill="#ffffff" stroke="#dce8eb"/>
+        <text x="32" y="46" font-size="22" font-weight="900" fill="#142837">부족 재고 리스트</text>
+        <text x="32" y="78" font-size="15" font-weight="800" fill="#7b8f96">발주 우선순위</text>
+        <g font-size="16" font-weight="900">
+          <text x="32" y="126" fill="#7b8f96">제품명</text><text x="258" y="126" fill="#7b8f96">현 재고</text><text x="370" y="126" fill="#7b8f96">재고일수</text><text x="500" y="126" fill="#7b8f96">상태</text>
+          <text x="32" y="172" fill="#142837">아모잘탄정 5/50mg</text><text x="282" y="172" fill="#142837">4</text><text x="388" y="172" fill="#142837">1.2일</text><rect x="500" y="150" width="70" height="30" rx="15" fill="#ffe6df"/><text x="535" y="171" text-anchor="middle" font-size="13" fill="#d35237">긴급</text>
+          <text x="32" y="218" fill="#142837">케토톱 플라스타</text><text x="282" y="218" fill="#142837">12</text><text x="388" y="218" fill="#142837">2.8일</text><rect x="500" y="196" width="70" height="30" rx="15" fill="#ffe6df"/><text x="535" y="217" text-anchor="middle" font-size="13" fill="#d35237">긴급</text>
+          <text x="32" y="264" fill="#142837">일회용 주사기 3ml</text><text x="282" y="264" fill="#142837">46</text><text x="388" y="264" fill="#142837">4.1일</text><rect x="500" y="242" width="70" height="30" rx="15" fill="#eef9f7"/><text x="535" y="263" text-anchor="middle" font-size="13" fill="#0aa39a">관심</text>
+        </g>
+        <rect x="666" width="316" height="318" rx="24" fill="#f8fbfc" stroke="#dce8eb"/>
+        <text x="698" y="46" font-size="22" font-weight="900" fill="#142837">자동화 파이프라인</text>
+        <g font-size="16" font-weight="900">
+          <text x="698" y="104" fill="#0aa39a">09:30</text><text x="766" y="104" fill="#142837">EDB 명세서 전송</text>
+          <text x="698" y="154" fill="#0aa39a">12:50</text><text x="766" y="154" fill="#142837">매출 신고 자동 처리</text>
+          <text x="698" y="204" fill="#0aa39a">17:00</text><text x="766" y="204" fill="#142837">공급/마약류 신고</text>
+          <text x="698" y="254" fill="#0aa39a">22:00</text><text x="766" y="254" fill="#142837">야간 매출 신고</text>
+        </g>
+      </g>
+      <g transform="translate(0 626)">
+        <rect width="982" height="98" rx="22" fill="#f8fbfc" stroke="#dce8eb"/>
+        <text x="30" y="38" font-size="17" font-weight="900" fill="#7b8f96">실시간 로그</text>
+        <text x="30" y="68" font-size="18" font-weight="900" fill="#142837">38개 부족 품목 최저가 비교 대기열 생성 · 도매몰 22/25 정상</text>
+      </g>
+    </g>
+  </g>
+</svg>

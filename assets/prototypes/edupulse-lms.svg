@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 900" role="img" aria-labelledby="title desc">
+  <title id="title">EduPulse public LMS prototype preview</title>
+  <desc id="desc">A public education LMS operations dashboard prototype preview.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f4f8f3"/>
+      <stop offset="1" stop-color="#f7f1e8"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b8f87"/>
+      <stop offset="1" stop-color="#24415f"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#18332f" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1425" height="900" rx="28" fill="url(#bg)"/>
+  <g transform="translate(50 58)" filter="url(#shadow)">
+    <rect width="1325" height="784" rx="26" fill="#fbfbf7"/>
+    <rect width="210" height="784" rx="26" fill="#eef5f0"/>
+    <rect x="188" width="22" height="784" fill="#eef5f0"/>
+    <g font-family="Inter, Arial, sans-serif">
+      <rect x="32" y="38" width="36" height="36" rx="10" fill="#0b8f87"/>
+      <text x="50" y="63" text-anchor="middle" font-size="18" font-weight="900" fill="#ffffff">EP</text>
+      <text x="84" y="55" font-size="22" font-weight="900" fill="#17342f">EduPulse</text>
+      <text x="84" y="78" font-size="13" font-weight="800" fill="#6d807a">Public LMS</text>
+      <g font-size="17" font-weight="900" fill="#60746e">
+        <text x="36" y="154">⌂  대시보드</text>
+        <text x="36" y="212">▦  강좌 관리</text>
+        <text x="36" y="270">◉  학습자</text>
+        <text x="36" y="328">▣  리포트</text>
+      </g>
+      <rect x="28" y="666" width="154" height="62" rx="16" fill="#ffffff" stroke="#d7e6df"/>
+      <text x="48" y="694" font-size="13" font-weight="900" fill="#77908a">운영 상태</text>
+      <text x="48" y="716" font-size="15" font-weight="900" fill="#17342f">12월 계약 종료 기준</text>
+    </g>
+    <g transform="translate(254 58)" font-family="Inter, Arial, sans-serif">
+      <text x="0" y="0" font-size="15" font-weight="900" fill="#0b8f87">공공 교육서비스 LMS</text>
+      <text x="0" y="58" font-size="46" font-weight="900" fill="#1d283f">운영 대시보드</text>
+      <rect x="858" y="8" width="312" height="44" rx="22" fill="#ffffff" stroke="#d7e6df"/>
+      <text x="886" y="36" font-size="15" font-weight="800" fill="#8a9b96">강좌, 학습자, 기관 검색</text>
+      <g transform="translate(0 108)">
+        <rect width="230" height="112" rx="24" fill="#ffffff" stroke="#e0e7e4"/>
+        <text x="28" y="34" font-size="14" font-weight="900" fill="#7b8d88">활성 수강생</text>
+        <text x="28" y="78" font-size="42" font-weight="900" fill="#1d283f">18,420</text>
+        <text x="150" y="82" font-size="14" font-weight="900" fill="#0b8f87">+8.4%</text>
+        <rect x="256" width="230" height="112" rx="24" fill="#ffffff" stroke="#e0e7e4"/>
+        <text x="284" y="34" font-size="14" font-weight="900" fill="#7b8d88">운영 강좌</text>
+        <text x="284" y="78" font-size="42" font-weight="900" fill="#1d283f">126</text>
+        <rect x="512" width="230" height="112" rx="24" fill="#ffffff" stroke="#e0e7e4"/>
+        <text x="540" y="34" font-size="14" font-weight="900" fill="#7b8d88">미채점 과제</text>
+        <text x="540" y="78" font-size="42" font-weight="900" fill="#1d283f">342</text>
+        <rect x="768" width="230" height="112" rx="24" fill="#ffffff" stroke="#e0e7e4"/>
+        <text x="796" y="34" font-size="14" font-weight="900" fill="#7b8d88">평균 진도율</text>
+        <text x="796" y="78" font-size="42" font-weight="900" fill="#1d283f">73%</text>
+      </g>
+      <g transform="translate(0 266)">
+        <rect width="670" height="284" rx="24" fill="#ffffff" stroke="#e0e7e4"/>
+        <text x="32" y="46" font-size="20" font-weight="900" fill="#1d283f">월간 운영 지표</text>
+        <g transform="translate(70 82)">
+          <rect x="0" y="112" width="76" height="106" rx="8" fill="url(#bar)"/>
+          <rect x="118" y="96" width="76" height="122" rx="8" fill="url(#bar)"/>
+          <rect x="236" y="78" width="76" height="140" rx="8" fill="url(#bar)"/>
+          <rect x="354" y="64" width="76" height="154" rx="8" fill="url(#bar)"/>
+          <rect x="472" y="44" width="76" height="174" rx="8" fill="url(#bar)"/>
+          <g fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle">
+            <text x="38" y="198">58%</text><text x="156" y="198">63%</text><text x="274" y="198">70%</text><text x="392" y="198">75%</text><text x="510" y="198">83%</text>
+          </g>
+        </g>
+        <rect x="704" width="336" height="284" rx="24" fill="#ffffff" stroke="#e0e7e4"/>
+        <text x="736" y="46" font-size="20" font-weight="900" fill="#1d283f">콘텐츠 유형</text>
+        <circle cx="818" cy="154" r="72" fill="none" stroke="#0b8f87" stroke-width="30"/>
+        <path d="M818 82 A72 72 0 0 1 886 130" fill="none" stroke="#24415f" stroke-width="30"/>
+        <path d="M886 130 A72 72 0 0 1 850 216" fill="none" stroke="#c47c00" stroke-width="30"/>
+        <g font-size="15" font-weight="900" fill="#52645f">
+          <text x="930" y="124">동영상 48%</text>
+          <text x="930" y="160">퀴즈 21%</text>
+          <text x="930" y="196">과제 18%</text>
+        </g>
+      </g>
+      <g transform="translate(0 594)">
+        <text x="0" y="0" font-size="22" font-weight="900" fill="#1d283f">오늘 처리할 일</text>
+        <rect y="30" width="1040" height="96" rx="22" fill="#ffffff" stroke="#e0e7e4"/>
+        <text x="32" y="68" font-size="18" font-weight="900" fill="#1d283f">신규 강좌 개설 승인</text>
+        <text x="32" y="96" font-size="15" font-weight="800" fill="#7b8d88">공공데이터 활용 입문 외 4건</text>
+        <rect x="858" y="56" width="96" height="34" rx="17" fill="#eef7f5"/>
+        <text x="906" y="79" text-anchor="middle" font-size="14" font-weight="900" fill="#0b8f87">심사</text>
+      </g>
+    </g>
+  </g>
+</svg>

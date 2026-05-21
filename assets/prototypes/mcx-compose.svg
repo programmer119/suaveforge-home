@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 900" role="img" aria-labelledby="title desc">
+  <title id="title">MCX Android native UI prototype preview</title>
+  <desc id="desc">A Jetpack Compose inspired Android field client dashboard preview.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#101827"/>
+      <stop offset="1" stop-color="#1f3657"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#d9e7f6"/>
+    </linearGradient>
+    <linearGradient id="ptt" x1="0" x2="1">
+      <stop offset="0" stop-color="#37d5aa"/>
+      <stop offset="1" stop-color="#23a4f4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#06101d" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1425" height="900" rx="28" fill="url(#bg)"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="88" y="92" font-size="28" font-weight="900" fill="#ffffff">MCX Field Client</text>
+    <text x="88" y="128" font-size="17" font-weight="700" fill="#8fa4bd">Compose based Android terminal app prototype</text>
+    <g transform="translate(88 164)">
+      <rect width="170" height="54" rx="18" fill="#1f2b40" stroke="#41516b"/>
+      <text x="24" y="23" font-size="13" font-weight="800" fill="#91a6be">Network</text>
+      <text x="24" y="42" font-size="18" font-weight="900" fill="#ffffff">PS-LTE / LTE-R</text>
+      <rect x="194" width="130" height="54" rx="18" fill="#1f2b40" stroke="#41516b"/>
+      <text x="218" y="23" font-size="13" font-weight="800" fill="#91a6be">Mode</text>
+      <text x="218" y="42" font-size="18" font-weight="900" fill="#ffffff">Normal</text>
+      <rect x="348" width="126" height="54" rx="18" fill="#1f2b40" stroke="#41516b"/>
+      <text x="372" y="23" font-size="13" font-weight="800" fill="#91a6be">Latency</text>
+      <text x="372" y="42" font-size="18" font-weight="900" fill="#ffffff">44 ms</text>
+    </g>
+    <g transform="translate(88 278)">
+      <text x="0" y="0" font-size="18" font-weight="900" fill="#62f2c2">Benchmark Direction</text>
+      <text x="0" y="44" font-size="30" font-weight="900" fill="#ffffff">Android Native UI/UX</text>
+      <text x="0" y="88" font-size="20" font-weight="700" fill="#a9bbcd">PTT, Talk Group, emergency call, map and message flows for field terminals.</text>
+    </g>
+  </g>
+  <g transform="translate(562 70)" filter="url(#shadow)">
+    <rect width="410" height="760" rx="54" fill="#07111f"/>
+    <rect x="24" y="24" width="362" height="712" rx="42" fill="url(#phone)"/>
+    <rect x="54" y="58" width="302" height="52" rx="18" fill="#10253f"/>
+    <g font-family="Inter, Arial, sans-serif">
+      <text x="82" y="91" font-size="18" font-weight="900" fill="#ffffff">Talk Group Monitor</text>
+      <circle cx="330" cy="84" r="13" fill="#37d5aa"/>
+      <text x="54" y="152" font-size="13" font-weight="900" fill="#66758a">SITUATION</text>
+      <text x="54" y="181" font-size="24" font-weight="900" fill="#0f2035">Line 2 Control</text>
+      <text x="54" y="209" font-size="16" font-weight="700" fill="#647287">Train 204 keyed 00:03</text>
+    </g>
+    <g transform="translate(54 244)" font-family="Inter, Arial, sans-serif">
+      <rect width="302" height="74" rx="20" fill="#ffffff"/>
+      <text x="22" y="30" font-size="18" font-weight="900" fill="#0f2035">Emergency Ops</text>
+      <text x="22" y="54" font-size="14" font-weight="700" fill="#6e7c8f">Priority floor available</text>
+      <rect x="210" y="22" width="72" height="30" rx="15" fill="#dcfff5"/>
+      <text x="246" y="43" text-anchor="middle" font-size="12" font-weight="900" fill="#00856b">READY</text>
+      <rect y="92" width="302" height="74" rx="20" fill="#ffffff"/>
+      <text x="22" y="122" font-size="18" font-weight="900" fill="#0f2035">Station Safety</text>
+      <text x="22" y="146" font-size="14" font-weight="700" fill="#6e7c8f">Platform 3 crowd alert</text>
+      <rect x="208" y="114" width="74" height="30" rx="15" fill="#fff3d5"/>
+      <text x="245" y="135" text-anchor="middle" font-size="12" font-weight="900" fill="#a56600">WATCH</text>
+      <rect y="184" width="302" height="74" rx="20" fill="#ffffff"/>
+      <text x="22" y="214" font-size="18" font-weight="900" fill="#0f2035">Mutual Aid</text>
+      <text x="22" y="238" font-size="14" font-weight="700" fill="#6e7c8f">Patched to PS-LTE</text>
+      <rect x="196" y="206" width="86" height="30" rx="15" fill="#e9efff"/>
+      <text x="239" y="227" text-anchor="middle" font-size="12" font-weight="900" fill="#4263d5">PATCHED</text>
+    </g>
+    <g transform="translate(54 540)" font-family="Inter, Arial, sans-serif">
+      <rect width="302" height="120" rx="26" fill="#10253f"/>
+      <text x="26" y="34" font-size="13" font-weight="900" fill="#91a6be">ACTIVE TALK GROUP</text>
+      <text x="26" y="66" font-size="26" font-weight="900" fill="#ffffff">Line 2 Control</text>
+      <rect x="210" y="30" width="64" height="64" rx="32" fill="url(#ptt)"/>
+      <text x="242" y="69" text-anchor="middle" font-size="17" font-weight="900" fill="#ffffff">PTT</text>
+    </g>
+    <g transform="translate(54 682)" font-family="Inter, Arial, sans-serif" fill="#607086">
+      <text x="20" y="0" font-size="13" font-weight="900">Home</text>
+      <text x="94" y="0" font-size="13" font-weight="900">Groups</text>
+      <text x="178" y="0" font-size="13" font-weight="900">Map</text>
+      <text x="248" y="0" font-size="13" font-weight="900">Msg</text>
+    </g>
+  </g>
+  <g transform="translate(1025 182)" font-family="Inter, Arial, sans-serif">
+    <rect width="300" height="450" rx="30" fill="#17263b" stroke="#40526e"/>
+    <text x="34" y="52" font-size="18" font-weight="900" fill="#6ff0c5">Core Flows</text>
+    <text x="34" y="96" font-size="34" font-weight="900" fill="#ffffff">Fast field</text>
+    <text x="34" y="136" font-size="34" font-weight="900" fill="#ffffff">operation UI</text>
+    <g font-size="18" font-weight="800" fill="#c7d5e6">
+      <text x="34" y="202">01  PTT press and hold</text>
+      <text x="34" y="250">02  Talk group status</text>
+      <text x="34" y="298">03  Emergency priority</text>
+      <text x="34" y="346">04  Location and message</text>
+      <text x="34" y="394">05  Accessibility flow</text>
+    </g>
+  </g>
+</svg>

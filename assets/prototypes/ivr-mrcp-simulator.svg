@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 900" role="img" aria-labelledby="title desc">
+  <title id="title">IVR MRCP simulator prototype preview</title>
+  <desc id="desc">A call center IVR, TTS, MRCP simulator dashboard prototype preview.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef4f7"/>
+      <stop offset="1" stop-color="#f8fbfc"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#0f2a33" flood-opacity=".13"/>
+    </filter>
+  </defs>
+  <rect width="1425" height="900" rx="28" fill="url(#bg)"/>
+  <g transform="translate(48 54)" filter="url(#shadow)">
+    <rect width="1329" height="792" rx="22" fill="#ffffff"/>
+    <g font-family="Inter, Arial, sans-serif">
+      <text x="36" y="52" font-size="16" font-weight="900" fill="#008c78">AVAYA EXPERIENCE PORTAL IVR</text>
+      <text x="36" y="102" font-size="43" font-weight="900" fill="#102a33">콜센터 TTS/MRCP 시뮬레이터</text>
+      <rect x="916" y="48" width="86" height="36" rx="18" fill="#008c78"/>
+      <text x="959" y="72" text-anchor="middle" font-size="14" font-weight="900" fill="#ffffff">대기중</text>
+      <rect x="1020" y="48" width="120" height="36" rx="18" fill="#eef4f7"/>
+      <text x="1080" y="72" text-anchor="middle" font-size="14" font-weight="900" fill="#48616b">Java Backend</text>
+      <rect x="1154" y="48" width="98" height="36" rx="18" fill="#eef4f7"/>
+      <text x="1203" y="72" text-anchor="middle" font-size="14" font-weight="900" fill="#48616b">MRCP v2</text>
+      <rect x="36" y="134" width="276" height="610" rx="18" fill="#f7fafb" stroke="#dce7eb"/>
+      <rect x="62" y="160" width="224" height="132" rx="14" fill="#102a33"/>
+      <text x="86" y="196" font-size="16" font-weight="900" fill="#67e7d2">INBOUND CALL</text>
+      <text x="86" y="240" font-size="28" font-weight="900" fill="#ffffff">02-3774-0000</text>
+      <text x="86" y="270" font-size="15" font-weight="800" fill="#abc1c8">콜 연결 전</text>
+      <rect x="62" y="310" width="104" height="44" rx="10" fill="#008c78"/>
+      <text x="114" y="338" text-anchor="middle" font-size="15" font-weight="900" fill="#ffffff">전화 수신</text>
+      <rect x="182" y="310" width="104" height="44" rx="10" fill="#eef4f7"/>
+      <text x="234" y="338" text-anchor="middle" font-size="15" font-weight="900" fill="#48616b">초기화</text>
+      <g transform="translate(62 378)" font-size="16" font-weight="900">
+        <g fill="#ffffff" stroke="#dce7eb">
+          <rect width="64" height="58" rx="10"/><rect x="80" width="64" height="58" rx="10"/><rect x="160" width="64" height="58" rx="10"/>
+          <rect y="76" width="64" height="58" rx="10"/><rect x="80" y="76" width="64" height="58" rx="10"/><rect x="160" y="76" width="64" height="58" rx="10"/>
+          <rect y="152" width="64" height="58" rx="10"/><rect x="80" y="152" width="64" height="58" rx="10"/><rect x="160" y="152" width="64" height="58" rx="10"/>
+        </g>
+        <g fill="#102a33" text-anchor="middle">
+          <text x="32" y="25">1</text><text x="112" y="25">2</text><text x="192" y="25">3</text>
+          <text x="32" y="101">4</text><text x="112" y="101">5</text><text x="192" y="101">6</text>
+          <text x="32" y="177">*</text><text x="112" y="177">0</text><text x="192" y="177">#</text>
+        </g>
+        <g fill="#6f838b" text-anchor="middle" font-size="11">
+          <text x="32" y="45">계좌조회</text><text x="112" y="45">주문/체결</text><text x="192" y="45">이체</text>
+          <text x="32" y="121">시세</text><text x="112" y="121">사고신고</text><text x="192" y="121">상담</text>
+          <text x="32" y="197">이전</text><text x="112" y="197">상담원</text><text x="192" y="197">반복</text>
+        </g>
+      </g>
+      <rect x="340" y="134" width="612" height="610" rx="18" fill="#f7fafb" stroke="#dce7eb"/>
+      <text x="378" y="186" font-size="16" font-weight="900" fill="#008c78">현재 시나리오</text>
+      <text x="378" y="230" font-size="31" font-weight="900" fill="#102a33">콜을 수신하면 IVR이 시작됩니다</text>
+      <rect x="810" y="176" width="76" height="42" rx="12" fill="#e8f7f5"/>
+      <text x="848" y="203" text-anchor="middle" font-size="14" font-weight="900" fill="#008c78">다시 듣기</text>
+      <rect x="378" y="270" width="522" height="110" rx="18" fill="#eef9fb"/>
+      <text x="408" y="308" font-size="16" font-weight="900" fill="#4f6870">TTS 안내문</text>
+      <text x="408" y="350" font-size="24" font-weight="900" fill="#102a33">전화 수신 버튼을 눌러 테스트 콜을 시작하세요.</text>
+      <text x="408" y="374" font-size="14" font-weight="800" fill="#6f838b">TTS 준비됨: Microsoft Heami - Korean</text>
+      <g transform="translate(378 414)">
+        <rect width="152" height="82" rx="14" fill="#ffffff" stroke="#dce7eb"/>
+        <text x="22" y="28" font-size="14" font-weight="900" fill="#6f838b">MRCP 상태</text>
+        <text x="22" y="60" font-size="25" font-weight="900" fill="#102a33">IDLE</text>
+        <rect x="172" width="152" height="82" rx="14" fill="#ffffff" stroke="#dce7eb"/>
+        <text x="194" y="28" font-size="14" font-weight="900" fill="#6f838b">마지막 입력</text>
+        <text x="194" y="60" font-size="25" font-weight="900" fill="#102a33">-</text>
+        <rect x="344" width="152" height="82" rx="14" fill="#ffffff" stroke="#dce7eb"/>
+        <text x="366" y="28" font-size="14" font-weight="900" fill="#6f838b">라우팅 결과</text>
+        <text x="366" y="60" font-size="25" font-weight="900" fill="#102a33">대기</text>
+      </g>
+      <g transform="translate(378 536)" font-size="14" font-weight="900">
+        <g fill="#ffffff" stroke="#dce7eb">
+          <rect width="92" height="104" rx="14"/><rect x="108" width="92" height="104" rx="14"/><rect x="216" width="92" height="104" rx="14"/><rect x="324" width="92" height="104" rx="14"/><rect x="432" width="92" height="104" rx="14"/>
+        </g>
+        <g fill="#008c78" text-anchor="middle">
+          <text x="46" y="32">01</text><text x="154" y="32">02</text><text x="262" y="32">03</text><text x="370" y="32">04</text><text x="478" y="32">05</text>
+        </g>
+        <g fill="#102a33" text-anchor="middle">
+          <text x="46" y="66">대표번호</text><text x="154" y="66">DTMF</text><text x="262" y="66">TTS 문장</text><text x="370" y="66">업무 큐</text><text x="478" y="66">적용/모니터링</text>
+          <text x="46" y="86">인입</text><text x="154" y="86">메뉴 선택</text><text x="262" y="86">생성</text><text x="370" y="86">라우팅</text>
+        </g>
+      </g>
+      <rect x="980" y="134" width="312" height="610" rx="18" fill="#f7fafb" stroke="#dce7eb"/>
+      <text x="1016" y="188" font-size="18" font-weight="900" fill="#102a33">MRCP / IVR 이벤트</text>
+      <rect x="1016" y="604" width="238" height="90" rx="12" fill="#ffffff" stroke="#dce7eb"/>
+      <text x="1038" y="636" font-size="13" font-weight="900" fill="#48616b">오후 09:55:58 · READY</text>
+      <text x="1038" y="666" font-size="15" font-weight="800" fill="#102a33">Prototype loaded</text>
+      <text x="1038" y="688" font-size="12" font-weight="800" fill="#6f838b">MRCP gateway profile=tts-prod-like</text>
+    </g>
+  </g>
+</svg>

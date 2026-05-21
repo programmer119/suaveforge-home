@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 900" role="img" aria-labelledby="title desc">
+  <title id="title">FarmShield AI prototype preview</title>
+  <desc id="desc">A dashboard-style preview for farm biosecurity priority simulation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef5f3"/>
+      <stop offset="1" stop-color="#dceae5"/>
+    </linearGradient>
+    <linearGradient id="map" x1="0" x2="1">
+      <stop offset="0" stop-color="#dbece5"/>
+      <stop offset="1" stop-color="#f7faf8"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#17342d" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1425" height="900" rx="28" fill="url(#bg)"/>
+  <rect x="42" y="48" width="1341" height="804" rx="28" fill="#f7fbfa" filter="url(#shadow)"/>
+  <rect x="42" y="48" width="1341" height="74" rx="28" fill="#edf5f3"/>
+  <rect x="42" y="96" width="1341" height="26" fill="#edf5f3"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="68" y="66" width="36" height="36" rx="9" fill="#0b8d78"/>
+    <text x="86" y="90" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">FS</text>
+    <text x="118" y="83" font-size="19" font-weight="800" fill="#12372f">FarmShield AI</text>
+    <text x="118" y="106" font-size="13" font-weight="600" fill="#78918a">Biosecurity route simulation</text>
+    <text x="265" y="95" font-size="26" font-weight="800" fill="#172b25">Farm Biosecurity Priority Map</text>
+    <rect x="1146" y="66" width="116" height="40" rx="10" fill="#ffffff"/>
+    <text x="1204" y="92" text-anchor="middle" font-size="18" font-weight="800" fill="#142922">1</text>
+    <rect x="1276" y="66" width="84" height="40" rx="10" fill="#ffffff"/>
+    <text x="1318" y="92" text-anchor="middle" font-size="18" font-weight="800" fill="#142922">9%</text>
+  </g>
+  <g transform="translate(265 154)" font-family="Inter, Arial, sans-serif">
+    <rect width="1094" height="118" rx="18" fill="#ffffff" stroke="#d8e4e1"/>
+    <text x="30" y="36" font-size="14" font-weight="800" fill="#8b9d98">SCENARIO</text>
+    <rect x="30" y="58" width="270" height="34" rx="8" fill="#f5f8f7" stroke="#d3dfdc"/>
+    <text x="48" y="81" font-size="16" font-weight="700" fill="#223d37">F-007 - goat</text>
+    <line x1="390" y1="74" x2="610" y2="74" stroke="#c8d7d3" stroke-width="7" stroke-linecap="round"/>
+    <line x1="390" y1="74" x2="503" y2="74" stroke="#138d7b" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="503" cy="74" r="13" fill="#138d7b"/>
+    <line x1="690" y1="74" x2="910" y2="74" stroke="#c8d7d3" stroke-width="7" stroke-linecap="round"/>
+    <line x1="690" y1="74" x2="802" y2="74" stroke="#f6a623" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="802" cy="74" r="13" fill="#f6a623"/>
+    <rect x="938" y="44" width="126" height="44" rx="12" fill="#edf6f4" stroke="#b8d3ce"/>
+    <text x="1001" y="72" text-anchor="middle" font-size="16" font-weight="800" fill="#0c7163">Run</text>
+  </g>
+  <g transform="translate(265 302)">
+    <rect width="760" height="472" rx="20" fill="url(#map)" stroke="#d7e5e1"/>
+    <path d="M30 410 C180 310,210 215,330 230 C455 245,470 134,625 78 C675 60,716 42,742 25" fill="none" stroke="#ffffff" stroke-width="22" opacity=".9"/>
+    <g stroke="#b8d6cd" stroke-width="2" opacity=".72">
+      <path d="M75 0 L20 472"/><path d="M230 0 L176 472"/><path d="M385 0 L330 472"/><path d="M540 0 L485 472"/><path d="M695 0 L640 472"/>
+      <path d="M0 88 H760"/><path d="M0 176 H760"/><path d="M0 264 H760"/><path d="M0 352 H760"/>
+    </g>
+    <g fill="#91cdb9" opacity=".7">
+      <circle cx="126" cy="96" r="15"/><circle cx="174" cy="144" r="14"/><circle cx="204" cy="222" r="16"/><circle cx="265" cy="304" r="13"/>
+      <circle cx="548" cy="170" r="15"/><circle cx="600" cy="242" r="14"/><circle cx="654" cy="316" r="16"/><circle cx="710" cy="384" r="13"/>
+    </g>
+    <g fill="none" stroke="#ee8d1c" stroke-width="4" opacity=".75">
+      <path d="M432 198 L510 246 L580 208 L626 274"/>
+      <path d="M432 198 L470 305 L548 330"/>
+      <path d="M432 198 L398 280 L342 315"/>
+    </g>
+    <g font-family="Inter, Arial, sans-serif">
+      <circle cx="432" cy="198" r="31" fill="#111b1a" stroke="#f7aa2b" stroke-width="6"/>
+      <text x="432" y="205" text-anchor="middle" font-size="15" font-weight="900" fill="#ffffff">F-007</text>
+      <g fill="#f6a623" stroke="#fff4d8" stroke-width="5">
+        <circle cx="510" cy="246" r="20"/><circle cx="580" cy="208" r="20"/><circle cx="626" cy="274" r="20"/><circle cx="470" cy="305" r="20"/><circle cx="548" cy="330" r="20"/><circle cx="398" cy="280" r="20"/><circle cx="342" cy="315" r="20"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(1054 302)" font-family="Inter, Arial, sans-serif">
+    <rect width="306" height="472" rx="20" fill="#ffffff" stroke="#d7e5e1"/>
+    <text x="26" y="42" font-size="20" font-weight="900" fill="#152c27">Priority List</text>
+    <text x="258" y="42" text-anchor="end" font-size="13" font-weight="700" fill="#8a9d98">Run 1</text>
+    <g font-size="16" font-weight="800">
+      <text x="26" y="94" fill="#6d817b">Farm</text><text x="100" y="94" fill="#6d817b">Type</text><text x="164" y="94" fill="#6d817b">Score</text><text x="232" y="94" fill="#6d817b">Reason</text>
+    </g>
+    <g font-size="16" font-weight="700" fill="#1a342e">
+      <text x="26" y="142">F-007</text><text x="100" y="142">goat</text><rect x="158" y="121" width="54" height="28" rx="14" fill="#111b1a"/><text x="185" y="141" text-anchor="middle" fill="#ffffff" font-size="13">100%</text><text x="232" y="142">start</text>
+      <text x="26" y="198">F-023</text><text x="100" y="198">cow</text><rect x="158" y="177" width="50" height="28" rx="14" fill="#f6a623"/><text x="183" y="197" text-anchor="middle" fill="#ffffff" font-size="13">43%</text><text x="232" y="198">watch</text>
+      <text x="26" y="254">F-003</text><text x="100" y="254">bird</text><rect x="158" y="233" width="50" height="28" rx="14" fill="#f6a623"/><text x="183" y="253" text-anchor="middle" fill="#ffffff" font-size="13">41%</text><text x="232" y="254">watch</text>
+      <text x="26" y="310">F-043</text><text x="100" y="310">cow</text><rect x="158" y="289" width="50" height="28" rx="14" fill="#f6a623"/><text x="183" y="309" text-anchor="middle" fill="#ffffff" font-size="13">36%</text><text x="232" y="310">watch</text>
+      <text x="26" y="366">F-031</text><text x="100" y="366">goat</text><rect x="158" y="345" width="50" height="28" rx="14" fill="#f6a623"/><text x="183" y="365" text-anchor="middle" fill="#ffffff" font-size="13">34%</text><text x="232" y="366">watch</text>
+    </g>
+  </g>
+</svg>

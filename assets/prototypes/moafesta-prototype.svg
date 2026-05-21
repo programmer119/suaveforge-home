@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 900" role="img" aria-labelledby="title desc">
+  <title id="title">MoAFesta reward fandom prototype preview</title>
+  <desc id="desc">A mobile fandom reward and creator sponsorship platform prototype preview.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff5fb"/>
+      <stop offset="1" stop-color="#eef7ff"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff4f8a"/>
+      <stop offset="1" stop-color="#7657ff"/>
+    </linearGradient>
+    <linearGradient id="heart" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff6a88"/>
+      <stop offset="1" stop-color="#ff3d6e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#4b2745" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1425" height="900" rx="28" fill="url(#bg)"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="88" y="92" font-size="20" font-weight="900" fill="#ff4f8a">REWARD FANDOM IP PLATFORM</text>
+    <text x="88" y="148" font-size="58" font-weight="900" fill="#211b3a">MoAFesta</text>
+    <text x="88" y="196" font-size="22" font-weight="700" fill="#807993">Creator sponsorship, heart charging and settlement flow prototype.</text>
+    <g transform="translate(88 252)">
+      <rect width="188" height="72" rx="22" fill="#ffffff" stroke="#f0d8e7"/>
+      <text x="28" y="30" font-size="14" font-weight="900" fill="#a79db2">TODAY HEARTS</text>
+      <text x="28" y="56" font-size="26" font-weight="900" fill="#211b3a">12,480</text>
+      <rect x="214" width="170" height="72" rx="22" fill="#ffffff" stroke="#f0d8e7"/>
+      <text x="242" y="30" font-size="14" font-weight="900" fill="#a79db2">PG STATUS</text>
+      <text x="242" y="56" font-size="26" font-weight="900" fill="#211b3a">Ready</text>
+      <rect x="410" width="180" height="72" rx="22" fill="#ffffff" stroke="#f0d8e7"/>
+      <text x="438" y="30" font-size="14" font-weight="900" fill="#a79db2">SETTLEMENT</text>
+      <text x="438" y="56" font-size="26" font-weight="900" fill="#211b3a">Center</text>
+    </g>
+  </g>
+  <g transform="translate(532 54)" filter="url(#shadow)">
+    <rect width="394" height="792" rx="58" fill="#241830"/>
+    <rect x="22" y="22" width="350" height="748" rx="44" fill="#fffaff"/>
+    <g font-family="Inter, Arial, sans-serif">
+      <text x="52" y="70" font-size="16" font-weight="900" fill="#5d526a">9:41</text>
+      <text x="270" y="70" font-size="16" font-weight="900" fill="#5d526a">LTE 100%</text>
+      <rect x="42" y="104" width="310" height="156" rx="30" fill="url(#hero)"/>
+      <text x="68" y="146" font-size="13" font-weight="900" fill="#ffe2ef">TODAY SUPPORT</text>
+      <text x="68" y="188" font-size="27" font-weight="900" fill="#ffffff">광고 리워드와</text>
+      <text x="68" y="224" font-size="27" font-weight="900" fill="#ffffff">하트 후원이 쌓이는 팬덤</text>
+      <circle cx="306" cy="151" r="27" fill="#ffffff" opacity=".24"/>
+      <path d="M306 168 C288 156 278 146 278 133 C278 124 285 118 294 118 C300 118 304 121 306 126 C309 121 314 118 320 118 C329 118 336 124 336 133 C336 146 325 156 306 168Z" fill="#ffffff"/>
+      <g transform="translate(42 284)">
+        <rect width="145" height="56" rx="18" fill="#fff1f6" stroke="#ffd0df"/>
+        <text x="72" y="36" text-anchor="middle" font-size="17" font-weight="900" fill="#e43f70">응원하기</text>
+        <rect x="165" width="145" height="56" rx="18" fill="#f1efff" stroke="#dcd6ff"/>
+        <text x="237" y="36" text-anchor="middle" font-size="17" font-weight="900" fill="#684cff">하트 충전</text>
+      </g>
+      <g transform="translate(42 364)">
+        <rect width="310" height="122" rx="24" fill="#ffffff" stroke="#f0dbe8"/>
+        <rect x="22" y="22" width="72" height="72" rx="24" fill="#ffe7ef"/>
+        <path d="M58 78 C39 66 30 55 30 43 C30 34 37 28 46 28 C52 28 56 31 58 36 C61 31 66 28 72 28 C81 28 88 34 88 43 C88 55 78 66 58 78Z" fill="url(#heart)"/>
+        <text x="112" y="45" font-size="20" font-weight="900" fill="#221b38">루미파크</text>
+        <text x="112" y="73" font-size="15" font-weight="700" fill="#8b8295">달빛 상점 굿즈 준비 노트</text>
+        <text x="112" y="100" font-size="14" font-weight="900" fill="#ff4f8a">하트 후원</text>
+        <rect y="144" width="310" height="122" rx="24" fill="#ffffff" stroke="#f0dbe8"/>
+        <rect x="22" y="166" width="72" height="72" rx="24" fill="#ece9ff"/>
+        <text x="58" y="211" text-anchor="middle" font-size="28" font-weight="900" fill="#684cff">C</text>
+        <text x="112" y="189" font-size="20" font-weight="900" fill="#221b38">코코프렌즈</text>
+        <text x="112" y="217" font-size="15" font-weight="700" fill="#8b8295">신규 이모티콘 인기투표</text>
+        <text x="112" y="244" font-size="14" font-weight="900" fill="#ff4f8a">선물 메시지</text>
+      </g>
+      <g transform="translate(42 664)" fill="#9a91a5">
+        <text x="0" y="0" font-size="14" font-weight="900">피드</text>
+        <text x="82" y="0" font-size="14" font-weight="900">투표</text>
+        <text x="164" y="0" font-size="14" font-weight="900" fill="#ff4f8a">하트</text>
+        <text x="246" y="0" font-size="14" font-weight="900">정산</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(982 234)" font-family="Inter, Arial, sans-serif">
+    <rect width="312" height="406" rx="32" fill="#ffffff" stroke="#ead8e6"/>
+    <text x="32" y="58" font-size="16" font-weight="900" fill="#ff4f8a">PROTOTYPE SCOPE</text>
+    <text x="32" y="108" font-size="34" font-weight="900" fill="#211b3a">Sponsorship</text>
+    <text x="32" y="148" font-size="34" font-weight="900" fill="#211b3a">Upgrade</text>
+    <g font-size="18" font-weight="800" fill="#665e70">
+      <text x="32" y="216">01  하트 충전</text>
+      <text x="32" y="264">02  크리에이터 후원</text>
+      <text x="32" y="312">03  환불/정산 관리</text>
+      <text x="32" y="360">04  관리자 검수</text>
+    </g>
+  </g>
+</svg>

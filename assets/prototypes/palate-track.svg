@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 900" role="img" aria-labelledby="title desc">
+  <title id="title">Palate Track healthcare record app prototype preview</title>
+  <desc id="desc">A healthcare treatment record app prototype preview for palate expansion therapy.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f5fbff"/>
+      <stop offset="1" stop-color="#edf6f3"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef8f6"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" x2="1">
+      <stop offset="0" stop-color="#38c4a6"/>
+      <stop offset="1" stop-color="#3d8cff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#183b45" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1425" height="900" rx="28" fill="url(#bg)"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="90" y="96" font-size="20" font-weight="900" fill="#2aa58f">PALATE TRACK</text>
+    <text x="90" y="154" font-size="56" font-weight="900" fill="#172b3a">악궁확장 치료 기록</text>
+    <text x="90" y="204" font-size="22" font-weight="700" fill="#70838a">환자 앱과 병원 관리자 화면을 함께 검증하는 치료 기록관리 프로토타입</text>
+    <g transform="translate(90 270)">
+      <rect width="360" height="322" rx="28" fill="#ffffff" stroke="#dce9e7"/>
+      <text x="32" y="52" font-size="22" font-weight="900" fill="#172b3a">프로토타입 범위</text>
+      <g font-size="18" font-weight="800" fill="#526b72">
+        <text x="32" y="108">고유 코드 단독 로그인</text>
+        <text x="32" y="154">악궁확장기 모델 선택 및 안내</text>
+        <text x="32" y="200">일일 회전수, 통증, 메모 기록</text>
+        <text x="32" y="246">사진 첨부형 이상 증상 보고</text>
+        <text x="32" y="292">병원용 환자 현황 확인</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(562 58)" filter="url(#shadow)">
+    <rect width="394" height="790" rx="58" fill="#15333a"/>
+    <rect x="22" y="22" width="350" height="746" rx="44" fill="url(#phone)"/>
+    <g font-family="Inter, Arial, sans-serif">
+      <text x="54" y="70" font-size="16" font-weight="900" fill="#66818a">09:41</text>
+      <text x="274" y="70" font-size="16" font-weight="900" fill="#66818a">LTE 100%</text>
+      <text x="54" y="126" font-size="16" font-weight="900" fill="#2aa58f">오늘의 치료</text>
+      <text x="54" y="178" font-size="36" font-weight="900" fill="#172b3a">Palate Track</text>
+      <rect x="54" y="216" width="286" height="138" rx="28" fill="#ffffff" stroke="#dce9e7"/>
+      <text x="82" y="260" font-size="18" font-weight="900" fill="#172b3a">환자 코드 입력</text>
+      <text x="82" y="292" font-size="15" font-weight="700" fill="#73878e">병원에서 받은 고유 코드를 입력하면 치료 기록이 연결됩니다.</text>
+      <rect x="82" y="312" width="164" height="34" rx="10" fill="#f2f7f6" stroke="#dce9e7"/>
+      <text x="100" y="334" font-size="13" font-weight="800" fill="#9aacb0">환자 고유 코드</text>
+      <circle cx="298" cy="315" r="34" fill="url(#mint)"/>
+      <text x="298" y="323" text-anchor="middle" font-size="24" font-weight="900" fill="#ffffff">↺</text>
+      <rect x="54" y="386" width="286" height="116" rx="26" fill="#eaf8f5"/>
+      <text x="82" y="430" font-size="18" font-weight="900" fill="#172b3a">오늘 회전수</text>
+      <text x="82" y="470" font-size="42" font-weight="900" fill="#2aa58f">2</text>
+      <text x="130" y="468" font-size="17" font-weight="800" fill="#526b72">회 기록됨</text>
+      <rect x="54" y="528" width="132" height="104" rx="24" fill="#ffffff" stroke="#dce9e7"/>
+      <text x="82" y="568" font-size="16" font-weight="900" fill="#172b3a">통증</text>
+      <text x="82" y="604" font-size="34" font-weight="900" fill="#3d8cff">1/5</text>
+      <rect x="208" y="528" width="132" height="104" rx="24" fill="#ffffff" stroke="#dce9e7"/>
+      <text x="236" y="568" font-size="16" font-weight="900" fill="#172b3a">사진 보고</text>
+      <text x="236" y="604" font-size="34" font-weight="900" fill="#2aa58f">0</text>
+      <g transform="translate(54 690)" fill="#7b8e94">
+        <text x="0" y="0" font-size="14" font-weight="900">기록</text>
+        <text x="112" y="0" font-size="14" font-weight="900">장치</text>
+        <text x="224" y="0" font-size="14" font-weight="900">보고</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(1004 260)" font-family="Inter, Arial, sans-serif">
+    <rect width="304" height="360" rx="32" fill="#ffffff" stroke="#dce9e7"/>
+    <text x="32" y="58" font-size="18" font-weight="900" fill="#2aa58f">Hospital View</text>
+    <text x="32" y="108" font-size="34" font-weight="900" fill="#172b3a">환자 현황</text>
+    <g font-size="18" font-weight="800" fill="#526b72">
+      <text x="32" y="172">01  치료 기록 확인</text>
+      <text x="32" y="220">02  이상 증상 보고</text>
+      <text x="32" y="268">03  사진 첨부 검토</text>
+      <text x="32" y="316">04  병원 알림 연동</text>
+    </g>
+  </g>
+</svg>

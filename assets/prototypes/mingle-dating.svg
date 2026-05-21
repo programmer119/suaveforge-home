@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 900" role="img" aria-labelledby="title desc">
+  <title id="title">Mingle Flutter dating app prototype preview</title>
+  <desc id="desc">A Flutter dating and matching app prototype preview.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff4f6"/>
+      <stop offset="1" stop-color="#f1f6ff"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff6f9b"/>
+      <stop offset="1" stop-color="#7b61ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#412a51" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1425" height="900" rx="28" fill="url(#bg)"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="92" y="96" font-size="20" font-weight="900" fill="#ff5f8f">FLUTTER DATING APP SAMPLE</text>
+    <text x="92" y="154" font-size="58" font-weight="900" fill="#241b3e">Mingle</text>
+    <text x="92" y="204" font-size="22" font-weight="700" fill="#7d728a">취향 매칭, 후보 추천, 채팅 흐름을 검증하는 데이팅 앱 프로토타입</text>
+    <g transform="translate(92 272)">
+      <rect width="350" height="312" rx="30" fill="#ffffff" stroke="#ecdce6"/>
+      <text x="32" y="54" font-size="22" font-weight="900" fill="#241b3e">오늘의 추천 포인트</text>
+      <text x="32" y="96" font-size="18" font-weight="800" fill="#786f84">오늘 19:00 이후 활동 중인 후보와</text>
+      <text x="32" y="126" font-size="18" font-weight="800" fill="#786f84">매칭 확률이 높습니다.</text>
+      <g font-size="17" font-weight="900">
+        <text x="32" y="190" fill="#241b3e">새로운 매칭</text>
+        <text x="270" y="190" fill="#ff5f8f">3명</text>
+        <text x="32" y="238" fill="#241b3e">채팅</text>
+        <text x="270" y="238" fill="#7b61ff">방금</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(548 56)" filter="url(#shadow)">
+    <rect width="392" height="790" rx="58" fill="#241b3e"/>
+    <rect x="22" y="22" width="348" height="746" rx="44" fill="#fffafd"/>
+    <g font-family="Inter, Arial, sans-serif">
+      <text x="54" y="72" font-size="36" font-weight="900" fill="#241b3e">Mingle</text>
+      <text x="302" y="72" font-size="28" font-weight="900" fill="#7b7288">≡</text>
+      <g transform="translate(54 110)" font-size="14" font-weight="900">
+        <rect width="74" height="36" rx="18" fill="#ffe9f0"/>
+        <text x="37" y="24" text-anchor="middle" fill="#ff5f8f">추천</text>
+        <rect x="88" width="74" height="36" rx="18" fill="#f3f0ff"/>
+        <text x="125" y="24" text-anchor="middle" fill="#7b61ff">근처</text>
+        <rect x="176" width="90" height="36" rx="18" fill="#f5f5f7"/>
+        <text x="221" y="24" text-anchor="middle" fill="#7b7288">새 가입</text>
+      </g>
+      <g transform="translate(54 174)">
+        <rect width="284" height="310" rx="34" fill="url(#card)"/>
+        <text x="26" y="44" font-size="15" font-weight="900" fill="#ffeaf2">취향 매칭</text>
+        <text x="26" y="84" font-size="38" font-weight="900" fill="#ffffff">94%</text>
+        <circle cx="74" cy="154" r="50" fill="#ffffff" opacity=".22"/>
+        <text x="74" y="170" text-anchor="middle" font-size="42" font-weight="900" fill="#ffffff">서</text>
+        <text x="26" y="238" font-size="28" font-weight="900" fill="#ffffff">서윤, 29</text>
+        <text x="26" y="270" font-size="16" font-weight="800" fill="#ffeaf2">1.8km · 브랜드 마케터</text>
+      </g>
+      <text x="78" y="524" font-size="20" font-weight="900" fill="#241b3e">전시</text>
+      <text x="150" y="524" font-size="20" font-weight="900" fill="#241b3e">와인</text>
+      <text x="220" y="524" font-size="20" font-weight="900" fill="#241b3e">러닝</text>
+      <g transform="translate(70 552)">
+        <circle cx="32" cy="32" r="32" fill="#f4f0f4"/><text x="32" y="42" text-anchor="middle" font-size="26" font-weight="900" fill="#7b7288">×</text>
+        <circle cx="126" cy="32" r="32" fill="#ff5f8f"/><text x="126" y="42" text-anchor="middle" font-size="26" font-weight="900" fill="#ffffff">♥</text>
+        <circle cx="220" cy="32" r="32" fill="#7b61ff"/><text x="220" y="42" text-anchor="middle" font-size="24" font-weight="900" fill="#ffffff">★</text>
+      </g>
+      <g transform="translate(54 650)">
+        <rect width="284" height="54" rx="18" fill="#ffffff" stroke="#eadde8"/>
+        <circle cx="28" cy="27" r="18" fill="#ffe9f0"/>
+        <text x="28" y="33" text-anchor="middle" font-size="15" font-weight="900" fill="#ff5f8f">서</text>
+        <text x="58" y="23" font-size="15" font-weight="900" fill="#241b3e">서윤</text>
+        <text x="58" y="43" font-size="12" font-weight="800" fill="#8a8093">이번 주말에 성수 전시 같이 볼래요?</text>
+      </g>
+      <g transform="translate(54 730)" fill="#8a8093">
+        <text x="0" y="0" font-size="14" font-weight="900">탐색</text>
+        <text x="88" y="0" font-size="14" font-weight="900" fill="#ff5f8f">매칭</text>
+        <text x="176" y="0" font-size="14" font-weight="900">채팅</text>
+        <text x="258" y="0" font-size="14" font-weight="900">프로필</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(998 286)" font-family="Inter, Arial, sans-serif">
+    <rect width="310" height="318" rx="32" fill="#ffffff" stroke="#eadde8"/>
+    <text x="32" y="58" font-size="18" font-weight="900" fill="#ff5f8f">Matching Flow</text>
+    <text x="32" y="108" font-size="34" font-weight="900" fill="#241b3e">Core screens</text>
+    <g font-size="18" font-weight="800" fill="#786f84">
+      <text x="32" y="172">01  추천 후보</text>
+      <text x="32" y="220">02  취향 매칭률</text>
+      <text x="32" y="268">03  매칭 목록 및 채팅</text>
+    </g>
+  </g>
+</svg>
