@@ -3137,7 +3137,7 @@ body { font-size: 16px; line-height: 1.65; }
   justify-self: end;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 .header-actions .header-cta {
   justify-self: auto;
@@ -3147,31 +3147,42 @@ body { font-size: 16px; line-height: 1.65; }
   z-index: 120;
 }
 .language-trigger {
-  min-height: 42px;
+  height: 46px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   border: 1px solid rgba(17,19,24,.10);
   border-radius: 999px;
-  padding: 0 13px 0 6px;
+  padding: 0 13px 0 9px;
   background: rgba(255,255,255,.9);
   color: var(--ink);
   box-shadow: 0 12px 28px rgba(17,19,24,.07);
   font-size: 12px;
   font-weight: 950;
+  line-height: 1;
   cursor: pointer;
-  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
 }
 .language-trigger:hover,
 .language-trigger:focus-visible,
 .language-switcher.is-open .language-trigger {
-  transform: translateY(-1px);
   border-color: rgba(201,44,40,.38);
   background: #fff;
 }
+.language-trigger:focus-visible {
+  outline: 2px solid rgba(201,44,40,.22);
+  outline-offset: 3px;
+}
+.language-trigger [data-language-label] {
+  display: inline-flex;
+  align-items: center;
+  height: 1em;
+}
 .language-flag {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
   display: inline-block;
   border-radius: 50%;
   background-color: #fff;
@@ -3221,6 +3232,11 @@ body { font-size: 16px; line-height: 1.65; }
   color: #252934;
   text-align: left;
   cursor: pointer;
+}
+.language-menu .language-flag {
+  width: 30px;
+  height: 30px;
+  flex-basis: 30px;
 }
 .language-menu button:hover,
 .language-menu button[aria-selected="true"] {
