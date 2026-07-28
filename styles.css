@@ -2419,3 +2419,715 @@ body { font-size: 16px; line-height: 1.65; }
     font-size: 14px;
   }
 }
+
+
+/* v7.1 selected long-copy motion systems */
+/* ======================================================================
+   SuaveForge long-copy motion preview
+   Selected systems: Focus Relay / Semantic Assembly / Context to Core
+   Motion explains hierarchy; it never blocks reading or scroll.
+   ====================================================================== */
+:root{
+  --motion-ease:cubic-bezier(.22,1,.36,1);
+  --motion-red:#c92c28;
+}
+.motion-target{isolation:isolate}
+
+/* 01. Focus Relay — all words remain legible; attention moves through them. */
+.motion-focus-relay .motion-focus-chunk{
+  display:inline-block;
+  opacity:.34;
+  transform:translateY(.12em);
+  filter:blur(.65px);
+  transition:none;
+  will-change:transform,opacity,filter;
+}
+.motion-focus-relay .hero-capability{overflow:hidden}
+.motion-focus-bar{
+  display:block;
+  width:0;
+  height:4px;
+  margin-top:18px;
+  border-radius:99px;
+  background:currentColor;
+  opacity:.72;
+}
+.motion-focus-relay.motion-play .motion-focus-1-1{animation:sfFocusChunk .72s var(--motion-ease) .06s both}
+.motion-focus-relay.motion-play .motion-focus-1-2{animation:sfFocusChunk .72s var(--motion-ease) .22s both}
+.motion-focus-relay.motion-play .hero-capability-automation .motion-focus-bar{animation:sfFocusBar .82s var(--motion-ease) .28s both}
+.motion-focus-relay.motion-play .motion-focus-2-1{animation:sfFocusChunk .72s var(--motion-ease) .46s both}
+.motion-focus-relay.motion-play .motion-focus-2-2{animation:sfFocusChunk .72s var(--motion-ease) .62s both}
+.motion-focus-relay.motion-play .hero-capability-rebuild .motion-focus-bar{animation:sfFocusBar .82s var(--motion-ease) .68s both}
+
+/* 02. Semantic Assembly — replaces the overlong ACS headline with meaning blocks. */
+.case-semantic-assembly{
+  min-height:230px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:22px;
+  max-width:680px!important;
+}
+.case-semantic-assembly .semantic-label{
+  display:block;
+  color:#ffaaa5;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.semantic-terms{
+  position:relative;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  min-height:54px;
+}
+.semantic-term{
+  display:inline-flex;
+  align-items:center;
+  min-height:46px;
+  padding:0 15px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:999px;
+  color:#fff;
+  font-size:clamp(16px,1.35vw,21px);
+  font-weight:900;
+  letter-spacing:-.035em;
+  opacity:.18;
+  filter:blur(2px);
+  will-change:transform,opacity,filter;
+}
+.semantic-term:nth-child(1){transform:translateX(105px) scale(.86)}
+.semantic-term:nth-child(2){transform:scale(.86)}
+.semantic-term:nth-child(3){transform:translateX(-105px) scale(.86)}
+.semantic-join{
+  height:1px;
+  width:0;
+  background:linear-gradient(90deg,rgba(255,255,255,.12),#ffaaa5 50%,rgba(255,255,255,.12));
+}
+.semantic-core{
+  display:block;
+  font-size:clamp(36px,3.75vw,60px);
+  line-height:.98;
+  letter-spacing:-.065em;
+  font-weight:950;
+  opacity:0;
+  transform:translateY(18px) scale(.97);
+  filter:blur(4px);
+}
+.semantic-core > span,.semantic-core > em{display:block}.semantic-core em{font-style:normal;color:#ff6f68}
+.case-semantic-assembly.motion-play .semantic-term:nth-child(1){animation:sfSemanticToken .82s var(--motion-ease) .05s both}
+.case-semantic-assembly.motion-play .semantic-term:nth-child(2){animation:sfSemanticToken .82s var(--motion-ease) .18s both}
+.case-semantic-assembly.motion-play .semantic-term:nth-child(3){animation:sfSemanticToken .82s var(--motion-ease) .31s both}
+.case-semantic-assembly.motion-play .semantic-join{animation:sfSemanticLine .9s var(--motion-ease) .52s both}
+.case-semantic-assembly.motion-play .semantic-core{animation:sfSemanticCore .86s var(--motion-ease) .68s both}
+
+/* 03. Staged copy — one sentence, four readable beats. */
+.motion-staged-copy{
+  display:grid;
+  gap:.02em;
+  text-wrap:balance;
+}
+.motion-staged-line{
+  display:block;
+  width:max-content;
+  max-width:100%;
+  opacity:.26;
+  transform:translateY(.28em);
+  filter:blur(1px);
+}
+.motion-staged-line.is-accent{color:var(--motion-red)}
+.motion-staged-copy.motion-play .motion-staged-line-1{animation:sfStageLine .7s var(--motion-ease) .04s both}
+.motion-staged-copy.motion-play .motion-staged-line-2{animation:sfStageLine .7s var(--motion-ease) .18s both}
+.motion-staged-copy.motion-play .motion-staged-line-3{animation:sfStageLine .7s var(--motion-ease) .36s both}
+.motion-staged-copy.motion-play .motion-staged-line-4{animation:sfStageLine .7s var(--motion-ease) .52s both}
+
+/* 04. Context to Core — explanation arrives, then the memorable conclusion takes over. */
+.motion-context-core .motion-context-copy{
+  opacity:.28;
+  transform:translateY(15px);
+  filter:blur(1px);
+}
+.motion-context-lead,
+.motion-context-coreline{display:inline-block}
+.motion-context-lead{opacity:.3;transform:translateY(.22em)}
+.motion-context-coreline{
+  opacity:0;
+  transform:translateY(.25em) scale(.96);
+  filter:blur(4px);
+  color:#fff;
+  position:relative;
+}
+.motion-context-coreline::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-.12em;
+  height:.075em;
+  border-radius:99px;
+  background:#fff;
+  transform:scaleX(0);
+  transform-origin:left;
+  opacity:.85;
+}
+.motion-context-core.motion-play .motion-context-copy{animation:sfContextIn .7s var(--motion-ease) .02s both, sfContextSettle .55s ease .72s forwards}
+.motion-context-core.motion-play .motion-context-lead{animation:sfStageLine .68s var(--motion-ease) .42s both}
+.motion-context-core.motion-play .motion-context-coreline{animation:sfContextCore .92s var(--motion-ease) .66s both}
+.motion-context-core.motion-play .motion-context-coreline::after{animation:sfContextUnderline .9s var(--motion-ease) 1.02s both}
+
+
+@keyframes sfFocusChunk{
+  0%{opacity:.34;transform:translateY(.12em);filter:blur(.65px)}
+  55%{opacity:1;transform:translateY(0);filter:blur(0)}
+  100%{opacity:1;transform:translateY(0);filter:blur(0)}
+}
+@keyframes sfFocusBar{from{width:0}to{width:100%}}
+@keyframes sfSemanticToken{from{opacity:.18;filter:blur(2px)}to{opacity:1;transform:translateX(0) scale(1);filter:blur(0)}}
+@keyframes sfSemanticLine{from{width:0}to{width:100%}}
+@keyframes sfSemanticCore{from{opacity:0;transform:translateY(18px) scale(.97);filter:blur(4px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes sfStageLine{from{opacity:.26;transform:translateY(.28em);filter:blur(1px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes sfContextIn{from{opacity:.1;transform:translateY(15px);filter:blur(1px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes sfContextSettle{to{opacity:.72}}
+@keyframes sfContextCore{from{opacity:0;transform:translateY(.25em) scale(.96);filter:blur(4px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes sfContextUnderline{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+@media(max-width:760px){
+  .motion-focus-bar{height:3px;margin-top:13px}
+  .case-semantic-assembly{min-height:0;gap:16px}
+  .semantic-terms{gap:7px;min-height:0}
+  .semantic-term{min-height:39px;padding:0 11px;font-size:14px}
+  .semantic-term:nth-child(1){transform:translateX(65px) scale(.88)}
+  .semantic-term:nth-child(3){transform:translateX(-65px) scale(.88)}
+  .semantic-core{font-size:36px;line-height:1.02}
+  .motion-staged-line{width:auto}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .motion-focus-chunk,.semantic-term,.semantic-core,.motion-staged-line,.motion-context-copy,.motion-context-lead,.motion-context-coreline{
+    opacity:1!important;transform:none!important;filter:none!important;animation:none!important
+  }
+  .motion-focus-bar,.semantic-join,.motion-context-coreline::after{width:100%!important;transform:none!important;animation:none!important}
+}
+
+
+/* v7.1 representative galleries and all-work rail */
+
+:root{
+  --sf-v2-ease:cubic-bezier(.16,1,.3,1);
+  --sf-v2-red:#c92c28;
+}
+
+/* Human copy reveal: two semantic beats, not a wall of type. */
+.sf-editorial-heading{overflow:visible}
+.sf-editorial-heading > span{
+  display:inline-block;
+  opacity:.18;
+  transform:translateY(.7em);
+  filter:blur(4px);
+}
+.sf-editorial-heading.sf-v2-play > span:first-child{
+  animation:sfV2Editorial .78s var(--sf-v2-ease) .04s both;
+}
+.sf-editorial-heading.sf-v2-play > span:last-child{
+  animation:sfV2Editorial .92s var(--sf-v2-ease) .18s both;
+}
+
+/* Representative work: actual image sequence with controlled cross-fade. */
+.case-story-media{
+  isolation:isolate;
+}
+.case-hover-gallery{
+  position:relative;
+  align-self:stretch;
+  min-height:0;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.case-hover-gallery img{
+  grid-area:1/1;
+  width:100%;
+  height:100%;
+  max-height:520px;
+  object-fit:contain;
+  object-position:center;
+  border:1px solid rgba(17,19,24,.13);
+  background:#fff;
+  box-shadow:0 24px 60px rgba(17,19,24,.18);
+  opacity:0;
+  transform:translate3d(2.2%,0,0) scale(1.012);
+  filter:saturate(.94);
+  transition:
+    opacity .62s cubic-bezier(.22,.61,.36,1),
+    transform .82s var(--sf-v2-ease),
+    filter .62s ease;
+  will-change:opacity,transform;
+}
+.case-hover-gallery img.is-active{
+  opacity:1;
+  transform:translate3d(0,0,0) scale(1);
+  filter:saturate(1);
+}
+.case-gallery-meter{
+  position:absolute;
+  z-index:4;
+  left:clamp(24px,3.3vw,48px);
+  right:clamp(24px,3.3vw,48px);
+  top:clamp(18px,2.2vw,30px);
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:14px;
+  pointer-events:none;
+}
+.case-gallery-meter-track{
+  height:2px;
+  overflow:hidden;
+  background:rgba(17,19,24,.18);
+}
+.case-gallery-meter-track i{
+  display:block;
+  width:100%;
+  height:100%;
+  background:var(--sf-v2-red);
+  transform:scaleX(0);
+  transform-origin:left;
+}
+.case-story-media.is-browsing .case-gallery-meter-track i{
+  animation:sfGalleryMeter .92s linear infinite;
+}
+.case-gallery-meter b{
+  min-width:54px;
+  color:#20242a;
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:.04em;
+  text-align:right;
+}
+.case-story-media .case-story-caption{
+  position:relative;
+  z-index:5;
+}
+.case-story-media:hover .case-story-caption i{color:var(--sf-v2-red)}
+
+/* 02 — Cinematic cut: technical meaning resolves into two short scenes. */
+.sf-cinematic-cut{
+  display:grid;
+  gap:.08em;
+  overflow:visible;
+}
+.sf-cinematic-cut span{
+  display:block;
+  width:max-content;
+  max-width:100%;
+  opacity:0;
+  filter:blur(5px);
+}
+.sf-cinematic-cut .sf-cut-a{transform:translateX(-.55em)}
+.sf-cinematic-cut .sf-cut-b{transform:translateX(.55em);color:var(--sf-v2-red)}
+.sf-cinematic-cut i{
+  display:block;
+  width:min(330px,72%);
+  height:4px;
+  margin-top:.2em;
+  background:var(--ink);
+  transform:scaleX(0);
+  transform-origin:left;
+}
+.sf-cinematic-cut.sf-v2-play .sf-cut-a{animation:sfV2CutLeft .82s var(--sf-v2-ease) .04s both}
+.sf-cinematic-cut.sf-v2-play .sf-cut-b{animation:sfV2CutRight .9s var(--sf-v2-ease) .18s both}
+.sf-cinematic-cut.sf-v2-play i{animation:sfV2Rule .82s var(--sf-v2-ease) .46s both}
+
+/* 03 — Focus scan: the conclusion becomes sharp only after the context. */
+.sf-focus-scan{display:block}
+.sf-focus-scan span,.sf-focus-scan strong{display:inline-block}
+.sf-focus-scan span{opacity:.28;transform:translateY(.18em)}
+.sf-focus-scan strong{
+  position:relative;
+  color:var(--ink);
+  opacity:.22;
+  transform:translateY(.22em);
+}
+.sf-focus-scan strong::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-.09em;
+  height:.08em;
+  background:var(--sf-v2-red);
+  transform:scaleX(0);
+  transform-origin:left;
+}
+.sf-focus-scan.sf-v2-play span{animation:sfV2FocusContext .68s var(--sf-v2-ease) .04s both}
+.sf-focus-scan.sf-v2-play strong{animation:sfV2FocusCore .86s var(--sf-v2-ease) .28s both}
+.sf-focus-scan.sf-v2-play strong::after{animation:sfV2Rule .78s var(--sf-v2-ease) .58s both}
+
+/* 04 — Spatial convergence: old system and new function meet in the middle. */
+.sf-convergence{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:.22em;
+  max-width:720px;
+}
+.sf-convergence span{
+  display:block;
+  opacity:0;
+  filter:blur(4px);
+}
+.sf-convergence .sf-conv-left{text-align:right;transform:translateX(-.55em)}
+.sf-convergence .sf-conv-right{transform:translateX(.55em);color:var(--sf-v2-red)}
+.sf-convergence i{
+  width:.12em;
+  height:.95em;
+  background:var(--ink);
+  transform:scaleY(0);
+}
+.sf-convergence em{
+  grid-column:1/-1;
+  margin-top:.1em;
+  color:#3e444c;
+  font-style:normal;
+  font-size:.42em;
+  line-height:1.25;
+  letter-spacing:-.035em;
+  opacity:0;
+  transform:translateY(.5em);
+}
+.sf-convergence.sf-v2-play .sf-conv-left{animation:sfV2ConvergeLeft .88s var(--sf-v2-ease) .04s both}
+.sf-convergence.sf-v2-play .sf-conv-right{animation:sfV2ConvergeRight .88s var(--sf-v2-ease) .04s both}
+.sf-convergence.sf-v2-play i{animation:sfV2Divider .54s var(--sf-v2-ease) .4s both}
+.sf-convergence.sf-v2-play em{animation:sfV2Rise .72s var(--sf-v2-ease) .5s both}
+
+/* 05 — Storyboard: process is understood as a sequence before the conclusion. */
+.sf-storyboard{
+  display:grid;
+  gap:.24em;
+}
+.sf-storyboard-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.16em;
+  font-size:.42em;
+  line-height:1.25;
+  letter-spacing:-.025em;
+}
+.sf-storyboard-flow span{
+  display:inline-flex;
+  align-items:center;
+  min-height:2.35em;
+  padding:0 .62em;
+  border:1px solid rgba(17,19,24,.28);
+  background:rgba(255,255,255,.42);
+  opacity:0;
+  transform:translateY(.65em);
+}
+.sf-storyboard-flow i{
+  color:var(--sf-v2-red);
+  font-style:normal;
+  opacity:0;
+  transform:scaleX(.2);
+}
+.sf-storyboard strong{
+  display:block;
+  color:var(--ink);
+  opacity:0;
+  transform:translateY(.35em);
+}
+.sf-storyboard.sf-v2-play .sf-storyboard-flow span:nth-of-type(1){animation:sfV2Rise .62s var(--sf-v2-ease) .04s both}
+.sf-storyboard.sf-v2-play .sf-storyboard-flow i:nth-of-type(1){animation:sfV2Arrow .42s var(--sf-v2-ease) .22s both}
+.sf-storyboard.sf-v2-play .sf-storyboard-flow span:nth-of-type(2){animation:sfV2Rise .62s var(--sf-v2-ease) .28s both}
+.sf-storyboard.sf-v2-play .sf-storyboard-flow i:nth-of-type(2){animation:sfV2Arrow .42s var(--sf-v2-ease) .46s both}
+.sf-storyboard.sf-v2-play .sf-storyboard-flow span:nth-of-type(3){animation:sfV2Rise .62s var(--sf-v2-ease) .52s both}
+.sf-storyboard.sf-v2-play strong{animation:sfV2CorePop .78s var(--sf-v2-ease) .72s both}
+
+/* ALL WORK: one continuous line, speed based on measured width. */
+.portfolio-v6{overflow:hidden}
+.portfolio-v6 .portfolio-head{margin-bottom:34px}
+.portfolio-grid{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:10px 0 24px;
+  display:block!important;
+  overflow:hidden;
+  background:transparent;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);
+}
+.sf-all-work-track{
+  display:flex;
+  width:max-content;
+  transform:translate3d(0,0,0);
+  animation:sfAllWork var(--all-work-duration,96s) linear infinite;
+  will-change:transform;
+}
+.sf-all-work-group{
+  display:flex;
+  flex:0 0 auto;
+  gap:18px;
+  padding:0 9px;
+}
+.portfolio-grid:hover .sf-all-work-track,
+.portfolio-grid:focus-within .sf-all-work-track{
+  animation-play-state:paused;
+}
+.portfolio-grid .portfolio-card{
+  flex:0 0 clamp(310px,27vw,390px);
+  width:clamp(310px,27vw,390px);
+  min-height:100%;
+}
+.portfolio-grid .portfolio-card-more{display:flex!important}
+.portfolio-grid .portfolio-figure{aspect-ratio:1.46/1}
+.portfolio-grid .portfolio-card > .portfolio-card-body{min-height:300px}
+.portfolio-more-wrap{display:none!important}
+
+/* Avoid ambiguity: movement should look intentional, not like a broken slider. */
+.portfolio-head::after{
+  content:"";
+  grid-column:1/-1;
+  width:100%;
+  height:1px;
+  margin-top:-24px;
+  background:linear-gradient(90deg,var(--sf-v2-red),rgba(17,19,24,.12) 34%,transparent 78%);
+}
+
+@keyframes sfV2Editorial{
+  from{opacity:.18;transform:translateY(.7em);filter:blur(4px)}
+  to{opacity:1;transform:translateY(0);filter:blur(0)}
+}
+@keyframes sfGalleryMeter{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes sfV2CutLeft{to{opacity:1;transform:translateX(0);filter:blur(0)}}
+@keyframes sfV2CutRight{to{opacity:1;transform:translateX(0);filter:blur(0)}}
+@keyframes sfV2Rule{to{transform:scaleX(1)}}
+@keyframes sfV2FocusContext{to{opacity:.72;transform:translateY(0)}}
+@keyframes sfV2FocusCore{to{opacity:1;transform:translateY(0)}}
+@keyframes sfV2ConvergeLeft{to{opacity:1;transform:translateX(0);filter:blur(0)}}
+@keyframes sfV2ConvergeRight{to{opacity:1;transform:translateX(0);filter:blur(0)}}
+@keyframes sfV2Divider{to{transform:scaleY(1)}}
+@keyframes sfV2Rise{to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes sfV2Arrow{to{opacity:1;transform:scaleX(1)}}
+@keyframes sfV2CorePop{
+  from{opacity:0;transform:translateY(.35em) scale(.97);filter:blur(4px)}
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+@keyframes sfAllWork{
+  to{transform:translate3d(-50%,0,0)}
+}
+
+@media(max-width:760px){
+  .case-hover-gallery{min-height:0;aspect-ratio:1.42/1}
+  .case-hover-gallery img{max-height:none}
+  .case-gallery-meter{left:18px;right:18px;top:14px}
+  .sf-cinematic-cut i{height:3px}
+  .sf-convergence{grid-template-columns:1fr;gap:.04em}
+  .sf-convergence .sf-conv-left,.sf-convergence .sf-conv-right{text-align:left}
+  .sf-convergence i{display:none}
+  .sf-convergence em{grid-column:auto;font-size:.5em;margin-top:.3em}
+  .sf-storyboard-flow{font-size:.48em;gap:.12em}
+  .portfolio-grid{
+    padding-left:0;
+    padding-right:0;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+  }
+  .portfolio-grid .portfolio-card{
+    flex-basis:min(82vw,350px);
+    width:min(82vw,350px);
+  }
+  .portfolio-grid .portfolio-card > .portfolio-card-body{min-height:280px}
+  .portfolio-head::after{margin-top:-10px}
+}
+@media(prefers-reduced-motion:reduce){
+  .sf-editorial-heading > span,
+  .sf-cinematic-cut span,
+  .sf-focus-scan span,
+  .sf-focus-scan strong,
+  .sf-convergence span,
+  .sf-convergence em,
+  .sf-storyboard-flow span,
+  .sf-storyboard-flow i,
+  .sf-storyboard strong{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+    animation:none!important;
+  }
+  .sf-cinematic-cut i,
+  .sf-focus-scan strong::after,
+  .sf-convergence i{transform:none!important;animation:none!important}
+  .sf-all-work-track{animation:none!important}
+  .portfolio-grid{overflow-x:auto;mask-image:none;-webkit-mask-image:none}
+  .sf-all-work-group[aria-hidden="true"]{display:none}
+}
+
+
+/* Representative work — light, legible and evidence-first. */
+#cases{background:#f6f2e9}
+#cases .case-story,
+#cases .case-story-1,
+#cases .case-story-2,
+#cases .case-story-3,
+#cases .case-story-4,
+#cases .case-story-5{
+  background:#fff;
+  color:#111318;
+  border-color:#c9c3b9;
+}
+#cases .case-story-copy{
+  background:linear-gradient(145deg,#fff 0%,#faf8f3 100%);
+}
+#cases .case-story-copy > p,
+#cases .case-story-1 .case-story-copy > p{
+  color:#3d424a;
+  font-size:16px;
+  line-height:1.72;
+}
+#cases .case-story-meta small,
+#cases .case-story-1 .case-story-meta small{color:#565c65}
+#cases .case-story-number,
+#cases .case-story-1 .case-story-number{color:rgba(17,19,24,.08)}
+#cases .case-proof-list span,
+#cases .case-story-1 .case-proof-list span{
+  border-color:rgba(17,19,24,.18);
+  color:#292e35;
+  background:rgba(255,255,255,.76);
+}
+#cases .case-stack span,
+#cases .case-story-1 .case-stack span{
+  border-color:rgba(17,19,24,.14);
+  background:#f1eee8;
+  color:#30353c;
+}
+#cases .case-detail-button,
+#cases .case-story-1 .case-detail-button{
+  color:#111318;
+  border-top-color:rgba(17,19,24,.2);
+}
+#cases .case-story-media,
+#cases .case-story-1 .case-story-media,
+#cases .case-story-2 .case-story-media,
+#cases .case-story-3 .case-story-media,
+#cases .case-story-4 .case-story-media,
+#cases .case-story-5 .case-story-media{
+  background:#ebe7df;
+}
+#cases .case-story-1 .case-story-media{background:#e6ebee}
+#cases .case-story-3 .case-story-media{background:#e7efed}
+#cases .case-story-4 .case-story-media{background:#e8e9ed}
+#cases .case-story-5 .case-story-media{background:#f0e7e2}
+#cases .case-story-media::after{display:none!important}
+#cases .case-hover-gallery img{
+  background:#fff;
+  filter:none!important;
+  mix-blend-mode:normal;
+  box-shadow:0 18px 42px rgba(17,19,24,.14);
+}
+#cases .case-hover-gallery img.is-active{filter:none!important}
+#cases .case-story-caption,
+#cases .case-story-media > .case-story-caption{
+  color:#1d2228;
+  background:transparent;
+}
+#cases .case-story-caption i,
+#cases .case-story-media > .case-story-caption i{color:#5b6169}
+
+/* Keep each headline readable even before its reveal begins. */
+#cases .sf-cinematic-cut span,
+#cases .sf-convergence span{opacity:.32;color:#23282f}
+#cases .sf-cinematic-cut .sf-cut-b,
+#cases .sf-convergence .sf-conv-right{color:#b92824}
+#cases .sf-focus-scan span{opacity:.62;color:#555b63}
+#cases .sf-focus-scan strong{opacity:.5;color:#111318}
+#cases .sf-storyboard-flow span{opacity:.42;color:#20252c;background:#fff}
+#cases .sf-storyboard strong{opacity:.42;color:#b92824}
+#cases .sf-convergence em{color:#4d535b}
+
+/* First case no longer assumes a black card. */
+#cases .case-semantic-assembly .semantic-label{color:#a92824}
+#cases .semantic-term{
+  border-color:rgba(17,19,24,.2);
+  background:#fff;
+  color:#171b20;
+  opacity:.38;
+}
+#cases .semantic-join{background:linear-gradient(90deg,rgba(17,19,24,.1),#c92c28 50%,rgba(17,19,24,.1))}
+#cases .semantic-core{color:#111318;opacity:.35}
+#cases .semantic-core em{color:#c92c28}
+
+/* Visible, deliberate key-word accents. */
+#cases .sf-cinematic-cut i{background:#c92c28}
+#cases .sf-focus-scan strong::after{height:.09em;background:#c92c28}
+#cases .sf-storyboard-flow i{color:#c92c28}
+#cases .case-story h3{max-width:720px;font-size:clamp(36px,4vw,62px);line-height:1.04}
+
+@media(max-width:760px){
+  #cases .case-story h3{font-size:31px;line-height:1.08}
+  #cases .case-story-copy > p,
+  #cases .case-story-1 .case-story-copy > p{font-size:15px}
+  #cases .semantic-core{font-size:35px}
+}
+
+/* Direct-child legacy caption rules must never darken the gallery layers. */
+#cases .case-story-media > .case-hover-gallery{
+  position:relative!important;
+  inset:auto!important;
+  display:grid!important;
+  width:100%!important;
+  padding:0!important;
+  background:transparent!important;
+  color:inherit!important;
+  backdrop-filter:none!important;
+}
+#cases .case-story-media > .case-gallery-meter{
+  background:transparent!important;
+  padding:0!important;
+  backdrop-filter:none!important;
+}
+#cases .case-hover-gallery img{
+  width:92%;
+  height:auto;
+  max-height:450px;
+  margin:auto;
+}
+#cases .sf-cinematic-cut span,
+#cases .sf-convergence span,
+#cases .sf-focus-scan span,
+#cases .sf-focus-scan strong,
+#cases .sf-storyboard-flow span,
+#cases .sf-storyboard strong,
+#cases .semantic-term,
+#cases .semantic-core{
+  filter:none!important;
+}
+
+/* Motion enhances the copy; it never hides the copy while waiting. */
+#cases .sf-cinematic-cut span,
+#cases .sf-convergence span,
+#cases .sf-focus-scan span,
+#cases .sf-focus-scan strong,
+#cases .sf-storyboard-flow span,
+#cases .sf-storyboard strong,
+#cases .semantic-term,
+#cases .semantic-core{
+  opacity:1!important;
+  transform:none;
+}
+#cases .sf-cinematic-cut span{width:auto;max-width:100%;text-wrap:balance}
+#cases .sf-cinematic-cut{max-width:620px}
+@keyframes sfV2CutLeft{from{opacity:.28;transform:translateX(-.45em)}to{opacity:1;transform:translateX(0)}}
+@keyframes sfV2CutRight{from{opacity:.28;transform:translateX(.45em)}to{opacity:1;transform:translateX(0)}}
+@keyframes sfV2FocusContext{from{opacity:.32;transform:translateY(.18em)}to{opacity:1;transform:translateY(0)}}
+@keyframes sfV2FocusCore{from{opacity:.32;transform:translateY(.22em)}to{opacity:1;transform:translateY(0)}}
+@keyframes sfV2ConvergeLeft{from{opacity:.25;transform:translateX(-.45em)}to{opacity:1;transform:translateX(0)}}
+@keyframes sfV2ConvergeRight{from{opacity:.25;transform:translateX(.45em)}to{opacity:1;transform:translateX(0)}}
+@keyframes sfV2Rise{from{opacity:.25;transform:translateY(.55em)}to{opacity:1;transform:translateY(0)}}
+@keyframes sfV2CorePop{from{opacity:.25;transform:translateY(.3em) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+
+/* v7.1 mobile representative expansion state */
+@media (max-width: 760px) {
+  #cases .case-extra { display: none !important; }
+  #cases .case-extra.is-shown { display: flex !important; }
+}

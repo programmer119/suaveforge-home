@@ -3,7 +3,7 @@ window.SF_PROJECTS = [
     "id": "acs",
     "title": "ACS 사고 콘텐츠 스튜디오",
     "short": "콘텐츠 작성, 사진 검수, 예약 실행과 처리 이력을 관리하는 Windows 프로그램",
-    "headline": "콘텐츠 작성부터 사진 검수와 예약 실행까지 자동화",
+    "headline": "작성·검수·예약을 하나의 흐름으로 연결",
     "proofs": [
       "Windows 설치형",
       "사진 자동·수동 검수",
@@ -28,9 +28,12 @@ window.SF_PROJECTS = [
     "stack": [
       "Python",
       "PySide6",
+      "OpenAI Responses API",
       "OpenCV",
       "ONNX Runtime",
       "SQLite",
+      "Windows DPAPI",
+      "Google Drive Desktop",
       "PyInstaller",
       "NSIS"
     ],
@@ -47,7 +50,7 @@ window.SF_PROJECTS = [
     "id": "dicom",
     "title": "MediView CT DICOM 뷰어",
     "short": "CT DICOM 영상을 3방향으로 보고 HU·ROI·거리를 측정하는 Windows 프로그램",
-    "headline": "CT 영상의 3방향 단면과 측정 도구를 한 화면에 구현",
+    "headline": "세 방향의 CT 단면을 한 화면에서 보고 바로 측정",
     "proofs": [
       "3방향 MPR",
       "HU·ROI·각도 측정",
@@ -86,7 +89,7 @@ window.SF_PROJECTS = [
     "id": "imgfind",
     "title": "AI 학습 이미지 수집·정제 도구",
     "short": "국가·문화 이미지를 찾고 출처, 라이선스와 중복 여부를 검사하는 수집 도구",
-    "headline": "이미지를 모으기 전에 출처와 중복부터 검사",
+    "headline": "필요한 이미지는 모으고 출처와 중복은 자동으로 검사",
     "proofs": [
       "다중 검색 제공처",
       "라이선스 확인",
@@ -110,7 +113,12 @@ window.SF_PROJECTS = [
       "Openverse API",
       "REST API",
       "JavaScript",
-      "Perceptual Hash"
+      "HTML/CSS",
+      "Image Crawling",
+      "Perceptual Hash",
+      "Metadata Filtering",
+      "License Filtering",
+      "CSV Metadata"
     ],
     "features": [
       "국가·문화 키워드와 목표 수량 설정",
@@ -125,7 +133,7 @@ window.SF_PROJECTS = [
     "id": "foxpro",
     "title": "Visual FoxPro ERP PDF 병합 모듈",
     "short": "기존 Visual FoxPro ERP에 PDF 병합과 보안 처리를 추가하는 연동 모듈",
-    "headline": "기존 ERP는 그대로 두고 PDF 처리 기능만 추가",
+    "headline": "오래된 ERP는 그대로, PDF 업무만 자동화",
     "proofs": [
       "PDF 3종 병합",
       "브라우저 로컬 처리",
@@ -147,11 +155,14 @@ window.SF_PROJECTS = [
     "url": "https://foxpro.suaveforge.com/",
     "stack": [
       "Visual FoxPro",
+      "Node.js",
       "JavaScript",
       "Vite",
       "PDF.js",
       "pdf-lib",
-      "Canvas API"
+      "Canvas API",
+      "GitHub Actions",
+      "GitHub Pages"
     ],
     "features": [
       "PDF 3개 순서 확인과 병합",
@@ -166,7 +177,7 @@ window.SF_PROJECTS = [
     "id": "temperament",
     "title": "유아동 기질검사 채점·PDF 자동화",
     "short": "Google Form 응답을 채점하고 규준을 적용해 결과지 PDF를 만드는 자동화 시스템",
-    "headline": "응답 접수부터 채점과 결과지 PDF 생성까지 자동화",
+    "headline": "응답 접수부터 결과지 PDF까지 한 번에 처리",
     "proofs": [
       "6개 하위요인",
       "8개 유형 분류",
@@ -189,11 +200,19 @@ window.SF_PROJECTS = [
     "url": "https://tsample.suaveforge.com/",
     "stack": [
       "Go",
+      "Node.js",
       "Puppeteer",
       "Chromium",
+      "REST API",
+      "Docker",
       "Google Cloud Run",
+      "Google Cloud Build",
+      "GitHub Actions",
+      "GitHub Pages",
       "HTML/CSS",
-      "JavaScript"
+      "JavaScript",
+      "SVG",
+      "JSON"
     ],
     "features": [
       "Google Form 응답 자동 처리",
@@ -221,7 +240,9 @@ window.SF_PROJECTS = [
       "React 19",
       "Vite 7",
       "JavaScript",
-      "Google Apps Script"
+      "Go",
+      "Google Apps Script",
+      "Google Sheets"
     ],
     "features": [
       "사용자 상태 선택과 상품 추천",
@@ -245,10 +266,12 @@ window.SF_PROJECTS = [
     ],
     "url": "https://programmer119.github.io/ai-saas-pc-stgnn-ai-1/",
     "stack": [
-      "HTML",
-      "CSS",
+      "TensorFlow.js",
+      "TensorFlow",
+      "PyTorch",
+      "STGNN",
       "JavaScript",
-      "TensorFlow.js"
+      "HTML/CSS"
     ],
     "features": [
       "가상 농장 감염 시나리오",
@@ -271,6 +294,8 @@ window.SF_PROJECTS = [
     ],
     "url": "https://programmer119.github.io/jetpack-compose-ui-mcx-client-android/",
     "stack": [
+      "Kotlin",
+      "Jetpack Compose",
       "HTML",
       "CSS",
       "JavaScript"
@@ -296,6 +321,9 @@ window.SF_PROJECTS = [
     ],
     "url": "https://programmer119.github.io/moafesta-prototype/",
     "stack": [
+      "Flutter",
+      "Laravel",
+      "PHP",
       "HTML",
       "CSS",
       "JavaScript"
@@ -321,6 +349,10 @@ window.SF_PROJECTS = [
     ],
     "url": "https://programmer119.github.io/python-react-saas-3-7-5/",
     "stack": [
+      "Python",
+      "React",
+      "Node.js",
+      "Sass",
       "HTML",
       "CSS",
       "JavaScript"
@@ -348,7 +380,10 @@ window.SF_PROJECTS = [
     "url": "https://programmer119.github.io/ivr-java-avaya-650-850-2026/",
     "stack": [
       "Node.js",
+      "React",
       "JavaScript",
+      "TTS",
+      "MRCP",
       "Web Speech API",
       "HTML/CSS"
     ],
@@ -374,6 +409,9 @@ window.SF_PROJECTS = [
     ],
     "url": "https://programmer119.github.io/lms-asap-12-7-x-5/",
     "stack": [
+      "Python",
+      "React",
+      "Node.js",
       "HTML",
       "CSS",
       "JavaScript"
@@ -399,6 +437,10 @@ window.SF_PROJECTS = [
     ],
     "url": "https://programmer119.github.io/palate-track-prototype-v2/",
     "stack": [
+      "SvelteKit",
+      "Svelte",
+      "Node.js",
+      "MySQL",
       "HTML",
       "CSS",
       "JavaScript"
@@ -424,9 +466,11 @@ window.SF_PROJECTS = [
     ],
     "url": "https://programmer119.github.io/1-crm-db-ga-2-2/",
     "stack": [
+      "JavaScript",
+      "Node.js",
+      "MySQL",
       "HTML",
-      "CSS",
-      "JavaScript"
+      "CSS"
     ],
     "features": [
       "KPI·채널별 광고 성과",
