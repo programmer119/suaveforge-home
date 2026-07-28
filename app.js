@@ -27,6 +27,46 @@
   menuButton?.addEventListener("click", () => setMenu(menuButton.getAttribute("aria-expanded") !== "true"));
   qsa("a", mobileMenu).forEach((link) => link.addEventListener("click", () => setMenu(false)));
 
+  const languageSwitcher = qs("[data-language-switcher]");
+  const languageTrigger = qs("[data-language-trigger]", languageSwitcher);
+  const languageFlag = qs("[data-language-flag]", languageSwitcher);
+  const languageLabel = qs("[data-language-label]", languageSwitcher);
+  const languageOptions = qsa("[data-language-option]", languageSwitcher);
+  const languageMeta = {
+    ko: { label: "KO", flag: "🇰🇷", htmlLang: "ko" },
+    en: { label: "EN", flag: "🇺🇸", htmlLang: "en" },
+    ja: { label: "JP", flag: "🇯🇵", htmlLang: "ja" },
+    es: { label: "ES", flag: "🇪🇸", htmlLang: "es" }
+  };
+  const setLanguageMenu = (open) => {
+    languageSwitcher?.classList.toggle("is-open", open);
+    languageTrigger?.setAttribute("aria-expanded", String(open));
+  };
+  const applyLanguage = (lang) => {
+    const selected = languageMeta[lang] || languageMeta.ko;
+    document.documentElement.lang = selected.htmlLang;
+    if (languageFlag) languageFlag.textContent = selected.flag;
+    if (languageLabel) languageLabel.textContent = selected.label;
+    languageOptions.forEach((option) => {
+      option.setAttribute("aria-selected", String(option.dataset.lang === lang));
+    });
+    try { localStorage.setItem("suaveforge.language", lang); } catch (_) {}
+  };
+  let savedLanguage = "ko";
+  try { savedLanguage = localStorage.getItem("suaveforge.language") || "ko"; } catch (_) {}
+  applyLanguage(savedLanguage);
+  languageTrigger?.addEventListener("click", () => {
+    setLanguageMenu(languageTrigger.getAttribute("aria-expanded") !== "true");
+  });
+  languageOptions.forEach((option) => option.addEventListener("click", () => {
+    applyLanguage(option.dataset.lang || "ko");
+    setLanguageMenu(false);
+  }));
+  document.addEventListener("click", (event) => {
+    if (!languageSwitcher || languageSwitcher.contains(event.target)) return;
+    setLanguageMenu(false);
+  });
+
   const updateHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 16);
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
@@ -284,6 +324,7 @@
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape") return;
     setMenu(false);
+    setLanguageMenu(false);
     if (projectDialog?.open) projectDialog.close();
   });
 })();
