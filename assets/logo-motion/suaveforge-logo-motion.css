@@ -166,3 +166,7 @@
     .suaveforge-logo-motion button:hover {
       background: #fff;
     }
+
+.suaveforge-logo-motion.logo-fallback .ghost-mark { opacity: 1; }
+.suaveforge-logo-motion.logo-fallback #motionLayers,
+.suaveforge-logo-motion.logo-fallback .exact-final { display: none; }
